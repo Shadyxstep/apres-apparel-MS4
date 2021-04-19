@@ -14,8 +14,8 @@ body {
     align-items: center;
     display: inline-flex;
     justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 2rem;
+    width: 2rem;
 }
 
 .logo-font {
@@ -27,13 +27,14 @@ body {
 }
 
 .shop-now-button {
-    background: white;
-    color: black;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     min-width: 260px;
 }
 
 .display-5 {
-    text-shadow: 2px 2px #000;
+    text-shadow: 1px 1px rgb(66, 66, 66);
+    text-transform: uppercase;
 }
 
 .btn-black {
