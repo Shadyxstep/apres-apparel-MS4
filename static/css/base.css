@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/surf.jpg') no-repeat center center fixed;
+    background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%), url('/media/surf.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -27,20 +27,19 @@ body {
 }
 
 .shop-now-button {
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     min-width: 260px;
 }
 
-.display-4 {
-    text-shadow: 1px 1px white;
+.display-5 {
+    text-shadow: 2px 2px #000;
 }
 
 .btn-black {
     background: black;
     color: white;
 }
-
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
@@ -77,7 +76,6 @@ body {
    width: auto;
    max-height: 300px;
 }
-
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -99,5 +97,17 @@ body {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+/* padding on top when nav is collapsed on mobile */
+
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 120px;
+    }
+
+    body {
+        height: calc(100vh - 120px);
     }
 }
