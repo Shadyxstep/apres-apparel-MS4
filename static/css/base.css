@@ -77,6 +77,12 @@ body {
    width: auto;
    max-height: 300px;
 }
+
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+    text-decoration: none;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
