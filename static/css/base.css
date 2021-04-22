@@ -70,6 +70,10 @@ body {
     background: #000 !important;
 }
 
+.product-container {
+    text-align: center;
+}
+
 .overlay {
     height: 100%;
     width: 100%;
