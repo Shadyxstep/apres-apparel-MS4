@@ -7,6 +7,9 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 
+# Additional Security for Add/Edit/Delete Product Views
+# from django.contrib.auth.decorators import user_passes_test
+
 # Create your views here.
 
 def all_products(request):
