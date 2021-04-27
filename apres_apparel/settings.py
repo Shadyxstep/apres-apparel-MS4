@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'profiles',
+    'teams',
 
     # AWS Bucket
     'storages',
@@ -128,8 +129,11 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
+ }
 
+#DATABASES = {
+#    'default': dj_database_url.parse('postgres://pdrdgwmyztwazl:d63bb8a275f3e3bc1387b51bb2b914a31fb45cb4ce1615fa05be54e1e1882747@ec2-54-74-77-126.eu-west-1.compute.amazonaws.com:5432/ddl3on3vn2d1bu')
+#}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
