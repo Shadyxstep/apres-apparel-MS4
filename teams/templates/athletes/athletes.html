@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
+<div class="container header-container mb-3">
     <div class="row">
         <div class="col"></div>
     </div>
@@ -13,8 +13,19 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            {{ athletes.name }}
-            {{ athletes.backround }}
+            <div class="card-deck">
+                {% for athlete in athletes %}
+                <div class="card">
+                    <img class="card-img-top" src="{{ athlete.image }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ athlete.name }}</h5>
+                        <p class="card-title">{{ athlete.sport }}</p>
+                        <p class="card-text"> {{ athlete.background }}</p>
+                        <a href="{{ athlete.social_url }}"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
