@@ -4,24 +4,24 @@ from .models import Team, Athletes
 # Create your views here.
 
 def all_team_members(request):
-    """ A view to show all products, including sorting and search queries """
+    """ A view to show all team members """
 
-    Team = Team.objects.all()
+    teams = Team.objects.all()
 
     context = {
-        'team': Team,
+        'teams': teams,
     }
 
-    return render(request, 'team/team.html', context)
+    return render(request, 'teams/team.html', context)
 
 
 def all_athletes(request):
-    """ A view to show all products, including sorting and search queries """
+    """ A view to show all Apres sponsored athletes"""
 
-    Athletes = Athletes.objects.all()
+    athletes = Athletes.objects.all()
 
     context = {
-        'athlete': Athletes,
+        'athletes': athletes,
     }
 
     return render(request, 'athletes/athletes.html', context)
