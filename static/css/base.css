@@ -17,12 +17,8 @@ body {
     height: 1.5rem;
     width: 1.5rem;
     color: rgb(82, 82, 82);
-    font-size: 1.5rem;
-    padding: 1rem;
-}
-
-.icon:hover {
-    color: grey;
+    font-size: 1.25rem;
+    padding: 0.75rem;
 }
 
 .logo-font {
@@ -37,11 +33,6 @@ body {
     background: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     min-width: 260px;
-}
-
-.display-5 {
-    text-shadow: 2px 2px rgb(66, 66, 66);
-    text-transform: uppercase;
 }
 
 .btn-black {
@@ -94,12 +85,6 @@ body {
 .card-img-top {
    width: auto;
    max-height: 300px;
-}
-
-.card-img-athlete {
-    width: auto;
-    height: 100%;
-    border-radius: 40%;
 }
 
 .img-fluid {
@@ -279,6 +264,35 @@ a.category-badge > span.badge:hover {
 .allauth-form-inner-content a {
 	color: #17a2b8; /* text-info */
 }
+
+/* Athlete Page Styling */
+
+.jumbotron {
+    width: 100%;
+    background: linear-gradient(0deg, #00000088 30%, #ffffff2d 100%), url('/media/track-background.jfif') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(85vh - 164px);
+}
+
+.text-shadow {
+    text-shadow: 1.5px 1.5px #000;
+}
+
+.btn-ath{
+    border-radius: 5px;
+}
+
+.btn-ath:hover {
+    color: #fff;
+    background-color: rgb(197, 197, 197);
+}
+
+.card-img-athlete {
+    width: auto;
+    height: 100%;
+    border-radius: 60%;
+}
+
 
 /* -------------------------------- Media Queries */
 

@@ -74,7 +74,7 @@
                                     <div class="input-group-prepend">
                                         <button class="decrement-qty btn btn-danger rounded-1"
                                             data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
-                                            <span class="icon">
+                                            <span class="icon-btn">
                                                 <i class="fas fa-minus"></i>
                                             </span>
                                         </button>
@@ -84,7 +84,7 @@
                                     <div class="input-group-append">
                                         <button class="increment-qty btn btn-success rounded-1"
                                             data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                            <span class="icon">
+                                            <span class="icon-btn">
                                                 <i class="fas fa-plus"></i>
                                             </span>
                                         </button>
@@ -138,13 +138,13 @@
                         {% endif %}
 
                          <div class="col{% if s %}-12 mt-2{% endif %}">
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-1 mt-5">
-                                    <span class="icon">
+                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-1 mt-3">
+                                    <span class="icon-btn">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-outline-black rounded-1 text-uppercase mt-5" value="Add to Bag">
+                                <input type="submit" class="btn btn-outline-black rounded-1 text-uppercase mt-3" value="Add to Bag">
                             </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% endwith %}
