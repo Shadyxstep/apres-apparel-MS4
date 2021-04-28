@@ -15,44 +15,67 @@
 
     <section class="jumbotron text-center text-white">
         <div class="container">
-            <h1 class="jumbotron-heading text-shadow display-4">Après Apparel Athletes</h1>
-            <hr>
+            <h1 class="jumbotron-heading text-shadow display-4 py-3">Après Apparel Athletes</h1>
             <h3 class="lead text-white text-shadow">At Après, we love to support athletes on their journey to becoming
                 the best
-                versions of themselves.</h3>
+                versions of themselves.
+                <br>
+            </h3>
             <p class="lead text-white text-shadow mt-3">No matter the sport.</p>
-            <h2 class="lead text-white text-shadow mt-3">Want to learn more about us ?</h2>
-            <p>
-                <a href="#" class="btn btn-lg btn-ath btn-outline-black my-2">Our Team</a>
-                <a href="#" class="btn btn-lg btn-ath btn-outline-black my-2">Our Products</a>
-            </p>
+        
+        <hr class="py-3">
+        <h2 class="lead text-white text-shadow mt-1" style="font-size: x-large;">Want to learn more about us ?</h2>
+        <p class="py-2">
+            <a href="{% url 'teams' %}" class="btn btn-lg btn-ath btn-outline-black">Our Team</a>
+            <a href="{% url 'products' %}" class="btn btn-lg btn-ath btn-outline-black">Our Products</a>
+        </p>
         </div>
     </section>
-    <h2 class="text-center px-3 mb-5">Check out some of our athletes below</h2>
-    <div class="row px-3">
-        {% for athlete in athletes %}
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div class="card h-100 border-0">
-                {% if athlete.image %}
-                <img class="card-img-athlete img-fluid" src="{{ athlete.image_url }}" alt="{{ product.name }}">
-                {% else %}
-                <img class="card-img-athlete img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                {% endif %}
-                <div class="card-body pb-0">
-                    <h5 class="mb-0 text-center font-weight-bold">{{ athlete.name }}</h5>
-                    <p class="lead mb-0 text-center">{{ athlete.sport }}</p>
-                    <p class="text-muted px-2 text-center">{{ athlete.background }}</p>
-                </div>
-                <div class="card-footer bg-white pt-0 border-0 text-center">
-                    <div class="row">
-                        <div class="col mt-2">
-                            <a class="icon" href="{{ athlete.social_url }}"><i class="fab fa-instagram fa-lg"></i></a>
-                            <a class="icon" href="{{ athlete.social_url2 }}"><i class="fab fa-linkedin fa-lg"></i></a>
+
+    <section class="athlete-section py-2">
+        <h3 class="text-center px-3 mb-5">Check out some of our athletes & what they do below</h3>
+        <div class="row px-3 mx-1">
+            {% for athlete in athletes %}
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <div class="card h-100 border-0">
+                    {% if athlete.image %}
+                    <div class="img-container">
+                        <img class="card-img-athlete img-fluid" src="{{ athlete.image_url }}" alt="{{ athlete.name }}">
+                        {% else %}
+                        <img class="card-img-athlete img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                            alt="{{ product.name }}">
+                        {% endif %}
+                    </div>
+                    <div class="card-body py-2">
+                        <h5 class="my-2 text-center font-weight-bold">{{ athlete.name }}</h5>
+                        <p class="lead mb-0 text-center" style="font-size: large;">{{ athlete.sport }}</p>
+                        <p class="lead mb-0 text-center text-muted" style="font-size: small;">{{ athlete.background }}</p>
+                        <div class="col py-2 text-center">
+                            <a class="icon-ath" href="{{ athlete.social_url }}"><i
+                                    class="fab fa-instagram fa-lg"></i></a>
+                            <a class="icon-ath" href="{{ athlete.social_url2 }}"><i
+                                    class="fab fa-linkedin fa-lg"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
+    </section>
+    <div class="btt-button shadow-sm rounded-0">
+        <a class="btt-link d-flex h-100 text-decoration-none">
+            <i class="fas fa-arrow-up fa-lg text-black mx-auto my-auto"></i>
+        </a>
     </div>
-    {% endblock %}
+</main>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <!--JS for click event to bring user back to top of page-->
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+    </script>
+{% endblock %}

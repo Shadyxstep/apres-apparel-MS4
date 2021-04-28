@@ -269,9 +269,9 @@ a.category-badge > span.badge:hover {
 
 .jumbotron {
     width: 100%;
-    background: linear-gradient(0deg, #00000088 30%, #ffffff2d 100%), url('/media/track-background.jfif') no-repeat center center fixed;
+    background: linear-gradient(0deg, #00000088 30%, #ffffff2d 100%), url('/media/sunset-surf.jfif') no-repeat center center fixed;
     background-size: cover;
-    height: calc(85vh - 164px);
+    height: calc(95vh - 164px);
 }
 
 .text-shadow {
@@ -288,9 +288,38 @@ a.category-badge > span.badge:hover {
 }
 
 .card-img-athlete {
-    width: auto;
-    height: 100%;
-    border-radius: 60%;
+    width: 100%;
+    height: 300px;
+    border-radius: 50%;
+}
+
+a.icon-ath {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    padding: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+a.icon-ath:hover {
+    color: rgb(117, 234, 255);
+}
+
+.img-container {
+    margin-top: 2rem;
+}
+
+/* Team Page Styling */
+
+.jumbotron-team {
+    width: 100%;
+    background: linear-gradient(0deg, #00000088 30%, #ffffff2d 100%), url('/media/team-background.jfif') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(95vh - 164px);
 }
 
 
