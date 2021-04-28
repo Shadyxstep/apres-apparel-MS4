@@ -16,6 +16,13 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+    color: rgb(82, 82, 82);
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.icon:hover {
+    color: grey;
 }
 
 .logo-font {
@@ -87,6 +94,12 @@ body {
 .card-img-top {
    width: auto;
    max-height: 300px;
+}
+
+.card-img-athlete {
+    width: auto;
+    height: 100%;
+    border-radius: 40%;
 }
 
 .img-fluid {

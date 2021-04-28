@@ -10,23 +10,48 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div class="card-deck">
-                {% for athlete in athletes %}
-                <div class="card">
-                    <img class="card-img-top" src="{{ athlete.image }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ athlete.name }}</h5>
-                        <p class="card-title">{{ athlete.sport }}</p>
-                        <p class="card-text"> {{ athlete.background }}</p>
-                        <a href="{{ athlete.social_url }}"><i class="fab fa-instagram"></i></a>
+<div class="overlay"></div>
+<main role="main">
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Apres Apparel Athletes</h1>
+            <hr>
+            <p class="lead text-muted">At Apres, We love to support athletes on their journey to becoming the best
+                versions of themselves.</p>
+            <p class="lead text-muted">No matter the sport.</p>
+            <p class="lead text-muted">Want to learn more about us ?</p>
+            <p>
+                <a href="#" class="btn btn-outline-black my-2">Our Team</a>
+                <a href="#" class="btn btn-outline-black my-2">Our Products</a>
+            </p>
+        </div>
+    </section>
+
+    <div class="row px-3">
+        {% for athlete in athletes %}
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card h-100 border-0">
+                {% if athlete.image %}
+                    <img class="card-img-athlete img-fluid" src="{{ athlete.image_url }}" alt="{{ product.name }}">
+                {% else %}
+                    <img class="card-img-athlete img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                {% endif %}
+                <div class="card-body pb-0">
+                    <h5 class="mb-0 text-center font-weight-bold">{{ athlete.name }}</h5>
+                    <p class="lead mb-0 text-center">{{ athlete.sport }}</p>
+                    <p class="text-muted mb-2 text-center">{{ athlete.background }}</p>
+                </div>
+                <div class="card-footer bg-white pt-0 border-0 text-center">
+                    <div class="row">
+                        <div class="col mt-2">
+                            <a class="icon" href="{{ athlete.social_url }}"><i class="fab fa-instagram fa-lg"></i></a>
+                            <a class="icon" href="{{ athlete.social_url }}"><i class="fab fa-linkedin fa-lg"></i></a>
+                        </div>
                     </div>
                 </div>
-                {% endfor %}
             </div>
         </div>
+        {% endfor %}
     </div>
-</div>
-{% endblock %}
+    {% endblock %}
