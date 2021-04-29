@@ -1,1 +1,1 @@
-webL gunicorn apres_apparel.wsgi:application
+web: gunicorn apres_apparel.wsgi:application
