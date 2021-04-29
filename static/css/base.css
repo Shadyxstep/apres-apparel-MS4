@@ -4,8 +4,8 @@ html {
 }
 
 body {
-    background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%), url('/media/surf.jpg') no-repeat center center fixed;
-    background-size: cover;
+    /*background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%), url('/media/surf.jpg') no-repeat center center fixed;
+    background-size: cover;*/
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Montserrat';
@@ -31,8 +31,8 @@ body {
 }
 
 .shop-now-button {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     min-width: 260px;
 }
 
@@ -53,12 +53,37 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .text-black {
     color: #000 !important;
+}
+
+/* Home Page Styling */
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 33%;
+  padding: 0 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card-home {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: transparent;
+  color: white;
 }
 
 .border-black {
@@ -328,6 +353,10 @@ a.icon-team {
     margin-right: 0.75rem;
 }
 
+/*--Footer--*/
+
+
+
 
 /* -------------------------------- Media Queries */
 
@@ -363,4 +392,14 @@ a.icon-team {
     body {
         height: calc(100vh - 120px);
     }
+
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }
