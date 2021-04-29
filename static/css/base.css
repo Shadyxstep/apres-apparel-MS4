@@ -83,7 +83,7 @@ body {
   padding: 16px;
   text-align: center;
   background-color: transparent;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .border-black {
@@ -423,10 +423,26 @@ footer {
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
+@media screen and (max-width: 667px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .team-img {
+        width: 50%;
+        height: 50%;
+    }
+
+    .logo-font {
+        font-size: 1.5rem;
+    }
+
+    .jumbotron-team {
+        font-size: 2rem;
+    }
+
+    
+
 }
