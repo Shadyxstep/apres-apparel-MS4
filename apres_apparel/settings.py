@@ -122,19 +122,17 @@ WSGI_APPLICATION = 'apres_apparel.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-#if 'DATABASE_URL' in os.environ:
-#    DATABASES = {
-#           'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-#        }
-#else:
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
-
-
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
@@ -170,8 +168,8 @@ USE_L10N = True
 USE_TZ = True
 
 
-#Static files (CSS, JavaScript, Images)
-#https://docs.djangoproject.com/en/3.1/howto/static-files/
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
