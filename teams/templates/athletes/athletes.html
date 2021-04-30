@@ -22,17 +22,22 @@
                 <br>
             </h3>
             <p class="lead text-white text-shadow mt-3">No matter the sport.</p>
-        
-        <hr class="py-3">
-        <h2 class="lead text-white text-shadow mt-1" style="font-size: x-large;">Want to learn more about us ?</h2>
-        <p class="py-2">
-            <a href="{% url 'teams' %}" class="btn btn-lg btn-ath btn-outline-black">Our Team</a>
-            <a href="{% url 'products' %}" class="btn btn-lg btn-ath btn-outline-black">Our Products</a>
-        </p>
+
+            <hr class="py-3">
+            <h2 class="lead text-white text-shadow mt-1" style="font-size: x-large;">Want to learn more about us ?</h2>
+            <p class="py-2">
+                <a href="{% url 'teams' %}" class="btn btn-lg btn-ath btn-outline-black">Our Team</a>
+                <a href="{% url 'products' %}" class="btn btn-lg btn-ath btn-outline-black">Our Products</a>
+            </p>
+            <p class="py-5">
+                <a href="#athlete-section" class="btn btn-lg rounded-0 text-uppercase py-3"><i class="fas fa-chevron-down"
+                        style="font-size: 2rem; color: rgb(255, 255, 255);"></i></a>
+
+            </p>
         </div>
     </section>
 
-    <section class="athlete-section py-2">
+    <section class="athlete-section py-2" id="athlete-section">
         <h3 class="text-center px-3 mb-5">Check out some of our athletes & what they do below</h3>
         <div class="row px-3 mx-1">
             {% for athlete in athletes %}
@@ -49,7 +54,8 @@
                     <div class="card-body py-2">
                         <h5 class="my-2 text-center font-weight-bold">{{ athlete.name }}</h5>
                         <p class="lead mb-0 text-center" style="font-size: large;">{{ athlete.sport }}</p>
-                        <p class="lead mb-0 text-center text-muted" style="font-size: small;">{{ athlete.background }}</p>
+                        <p class="lead mb-0 text-center text-muted" style="font-size: small;">{{ athlete.background }}
+                        </p>
                         <div class="col py-2 text-center">
                             <a class="icon-ath" href="{{ athlete.social_url }}"><i
                                     class="fab fa-instagram fa-lg"></i></a>
@@ -71,11 +77,11 @@
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <!--JS for click event to bring user back to top of page-->
-    <script type="text/javascript">
-		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
-    </script>
+{{ block.super }}
+<!--JS for click event to bring user back to top of page-->
+<script type="text/javascript">
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
 {% endblock %}
