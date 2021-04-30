@@ -1,4 +1,4 @@
-# <a href="https://apresapparel.herokuapp.com/">Snacc</a>
+# <a href="https://apresapparel.herokuapp.com/">Après Apparel</a>
 
 ![responsive_screenshot]()
 
@@ -68,4 +68,7 @@ We also have a section dedicated to athletes we support & follow, and the team m
 - [CRUD] Store Owners / Superusers can add new products to the website or update/delete current products. Certain defensive programming measures have been implemented such as only granting this permission to registered superusers/store owners.
 
 **Admin**
-- Django Admin application that allows superusers / store owners to  manually create, update or delete models or products from the store.
+- Django Admin application that allows superusers / store owners to manually create, update or delete any existing models or products from the store.
+
+**About Us**
+- Section designated to showcasing sponsored athletes & the team behind the Après Apparel brand.
