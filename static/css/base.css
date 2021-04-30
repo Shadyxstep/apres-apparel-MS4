@@ -63,6 +63,10 @@ body {
 
 /* Home Page Styling */
 
+.home-icons:hover {
+    background: #000;
+}
+
 /* Float four columns side by side */
 .column {
   float: left;
