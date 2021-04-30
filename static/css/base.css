@@ -420,6 +420,50 @@ footer {
         height: calc(100vh - 120px);
     }
 
+    .display-4.logo-font.text-black {
+        font-size: 2rem;
+    }
+
+    .display-5 {
+        font-size: 1.5rem;
+    }
+
+    .lead {
+        font-size: 0.75rem;
+    }
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    .fa-chevron-down.fa-chevron-up {
+        font-size: 1rem;
+    }
+
+    .team-img {
+        height: 150px;
+        width: auto;
+    }
+
+    .btn.btn-outline-black.rounded-1,
+    .btn.btn-black.rounded-1 {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: 0.25rem .5rem !important;
+    }
+
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
