@@ -42,8 +42,8 @@
 </div>
 
 
-<div class="container" id="second" style="display:block; text-align: center;">
-    <div class="col-12 py-5 mx-auto">
+<div class="container" style="display:block; text-align: center;">
+    <div class="col-12 py-5 mx-auto" id="second" >
         <h1>Icon Here</h1>
     </div>
     <div class="col-12 py-5 mx-auto">
@@ -52,16 +52,16 @@
                     style="font-size: 4rem; color: rgb(0, 0, 0);"></i></a>
         </h4>
     </div>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 mx-auto">
+    <div class="row row-cols-1 row-cols-md-3 mx-auto">
         <div class="col mb-4">
             <div class="card">
                 <img src="https://apresapparelbucket.s3-eu-west-1.amazonaws.com/media/team-card.jfif" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">The Apres Team</h5>
                     <p class="card-text">Meet the team behind the brand.</p>
-                    <span class="home-icons" style="color:black; font-size: 2rem;">
+                    <span class="home-icons" style="color:black;">
                         <a href="{% url 'teams' %}" class="btn btn-lg rounded-0 text-uppercase py-3">
-                            <i class="fas fa-user-friends"></i>
+                            <i class="fas fa-user-friends fa-lg"></i>
                         </a>
                     </span>
                 </div>
@@ -73,9 +73,9 @@
                 <div class="card-body">
                     <h5 class="card-title">The Apres Collection</h5>
                     <p class="card-text">Shop the outdoor collection now.</p>
-                    <span class="home-icons" style="color:black; font-size: 2rem;">
+                    <span class="home-icons" style="color:black;">
                         <a href="{% url 'products' %}" class="btn btn-lg rounded-0 text-uppercase py-3">
-                            <i class="fas fa-tshirt"></i>
+                            <i class="fas fa-tshirt fa-lg"></i>
                         </a>
                     </span>
                 </div>
@@ -87,14 +87,20 @@
                 <div class="card-body">
                     <h5 class="card-title">The Apres Athletes</h5>
                     <p class="card-text">Meet the athletes we sponsor.</p>
-                    <span class="home-icons" style="color:black; font-size: 2rem;">
+                    <span class="home-icons" style="color:black;">
                     <a href="{% url 'athletes' %}" class="btn btn-lg rounded-0 text-uppercase py-3">
-                        <i class="fas fa-running"></i>
+                        <i class="fas fa-running fa-lg"></i>
                     </a>
                     </span>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="col-12 py-5 mx-auto">
+        <h4>
+            <a href="#connect" class="btn btn-lg rounded-0 text-uppercase py-3"><i class="fas fa-chevron-down"
+                    style="font-size: 4rem; color: rgb(0, 0, 0);"></i></a>
+        </h4>
     </div>
 </div>
 
