@@ -42,41 +42,44 @@
 </div>
 
 
-<div class="container" id="second" style="height: 100vh; display:block; text-align: center;">
+<div class="container" id="second" style="display:block; text-align: center;">
     <div class="col-12 py-5 mx-auto">
         <h1>Icon Here</h1>
     </div>
     <div class="col-12 py-5 mx-auto">
-        <h1 class="text-dark">Cards Go here</h1>
+        <h4>
+            <a href="#top-home" class="btn btn-lg rounded-0 text-uppercase py-3"><i class="fas fa-chevron-down"
+                    style="font-size: 4rem; color: rgb(0, 0, 0);"></i></a>
+        </h4>
     </div>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 mx-auto">
         <div class="col mb-4">
             <div class="card">
-                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <img src="https://apresapparelbucket.s3-eu-west-1.amazonaws.com/media/team-card.jfif" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+                    <h5 class="card-title">The Apres Team</h5>
+                    <p class="card-text">Meet the team behind the brand.</p>
+                     <a href="{% url 'teams' %}" class="btn btn-lg rounded-0 text-uppercase py-3"></a>
                 </div>
             </div>
         </div>
         <div class="col mb-4">
             <div class="card">
-                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <img src="https://apresapparelbucket.s3-eu-west-1.amazonaws.com/media/shop-bg.jfif" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+                    <h5 class="card-title">The Apres Collection</h5>
+                    <p class="card-text">Shop the outdoor collection now.</p>
+                    <a href="{% url 'products' %}" class="btn btn-lg rounded-0 text-uppercase py-3"></a>
                 </div>
             </div>
         </div>
         <div class="col mb-4">
             <div class="card">
-                <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
+                <img src="https://apresapparelbucket.s3-eu-west-1.amazonaws.com/media/athlete-bg.jfif" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+                    <h5 class="card-title">The Apres Athletes</h5>
+                    <p class="card-text">Meet the athletes we sponsor.</p>
+                    <a href="{% url 'athletes' %}" class="btn btn-lg rounded-0 text-uppercase py-3"></a>
                 </div>
             </div>
         </div>
@@ -87,7 +90,7 @@
 
 
 
-    <!--
+<!--
 <div class="row">
     <div class="col-12 mx-auto" style="text-align: center;">
         <a href="#connect" class="btn btn-lg rounded-0 text-uppercase py-3"><i class="fas fa-chevron-down"
@@ -97,43 +100,41 @@
 -->
 
 
-    <section class="mt-3" style="display: block; height:100vh;">
-        <div class="h-100" id="connect" style="height:calc(100vh - 164px); padding-top:128px; display:block;">
-            <div class="container h-100">
-                <div class="row h-100">
-                    <div class="col-12 my-auto text-center">
-                        <div class="my-1" style="display: block;">
-                            <h4>
-                                <a href="#second" class="btn btn-lg rounded-0 text-uppercase py-3"><i
-                                        class="fas fa-chevron-up" style="font-size: 3rem; color: rgb(0, 0, 0);"></i></a>
-                            </h4>
-                        </div>
-                        <img src="{{ team.image_url }}" class="mt-3"
-                            style="border-radius: 50%; height: 300px; width: auto;">
-                        <h2 class="display-5 logo-font text-dark mt-2">
-                            <strong>Après Apparel</strong></h2>
-                        <h4 class="logo-font text-dark">
-                            Connect with us on social media</h4>
-                        <div class="col py-2 text-center">
-                            <a class="icon-team" href="https://www.instagram.com/apresapparel_/"><i
-                                    class="fab fa-instagram fa-lg"
-                                    style="font-size: 2.5rem; color:rgb(0, 0, 0);"></i></a>
-                            <a class="icon-team" href="https://www.facebook.com/"><i class="fab fa-facebook fa-lg"
-                                    style="font-size: 2.5rem; color:rgb(0, 0, 0);"></i></a>
-                            <a class="icon-team" href="https://www.twitter.com/"><i class="fab fa-twitter fa-lg"
-                                    style="font-size: 2.5rem; color:rgb(0, 0, 0);"></i></a>
-                        </div>
-                        <div class="my-2">
-                            <h4>
-                                <a href="#top-home" class="btn btn-lg rounded-0 text-uppercase py-3"><i
-                                        class="fas fa-chevron-down"
-                                        style="font-size: 3rem; color: rgb(0, 0, 0);"></i></a>
-                            </h4>
-                        </div>
+<section class="mt-3" style="display: block; height:100vh;">
+    <div class="h-100" id="connect" style="height:calc(100vh - 164px); padding-top:128px; display:block;">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12 my-auto text-center">
+                    <div class="my-1" style="display: block;">
+                        <h4>
+                            <a href="#second" class="btn btn-lg rounded-0 text-uppercase py-3"><i
+                                    class="fas fa-chevron-up" style="font-size: 3rem; color: rgb(0, 0, 0);"></i></a>
+                        </h4>
                     </div>
-
+                    <img src="{{ team.image_url }}" class="mt-3"
+                        style="border-radius: 50%; height: 300px; width: auto;">
+                    <h2 class="display-5 logo-font text-dark mt-2">
+                        <strong>Après Apparel</strong></h2>
+                    <h4 class="logo-font text-dark">
+                        Connect with us on social media</h4>
+                    <div class="col py-2 text-center">
+                        <a class="icon-team" href="https://www.instagram.com/apresapparel_/"><i
+                                class="fab fa-instagram fa-lg" style="font-size: 2.5rem; color:rgb(0, 0, 0);"></i></a>
+                        <a class="icon-team" href="https://www.facebook.com/"><i class="fab fa-facebook fa-lg"
+                                style="font-size: 2.5rem; color:rgb(0, 0, 0);"></i></a>
+                        <a class="icon-team" href="https://www.twitter.com/"><i class="fab fa-twitter fa-lg"
+                                style="font-size: 2.5rem; color:rgb(0, 0, 0);"></i></a>
+                    </div>
+                    <div class="my-2">
+                        <h4>
+                            <a href="#top-home" class="btn btn-lg rounded-0 text-uppercase py-3"><i
+                                    class="fas fa-chevron-down" style="font-size: 3rem; color: rgb(0, 0, 0);"></i></a>
+                        </h4>
+                    </div>
                 </div>
+
             </div>
         </div>
-    </section>
-    {% endblock %}
+    </div>
+</section>
+{% endblock %}
