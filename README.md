@@ -29,7 +29,7 @@ We also have a section dedicated to athletes we support & follow, and the team m
 - :white_check_mark: *create* my **own profile** with secure email verification as a **User**.
 - :white_check_mark: *update* & *manage* my **email address, password, delivery information** as a **Registered User**.
 - :white_check_mark: *view* **bag subtotal** whilst browsing the store as a **Guest/User**.
-- :white_check_mark: *view* **bag subtotal** whilst browsing the store as a **Guest/User**.
+- :white_check_mark: *view* **bag contents** whilst browsing the store as a **Guest/User**.
 - :white_check_mark: *add* **products** as a **Store Owner/Admin**.
 - :white_check_mark: *edit* **products** as a **Store Owner/Admin**.
 - :white_check_mark: *delete* **products** as a **Store Owner/Admin**.
