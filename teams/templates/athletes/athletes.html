@@ -11,7 +11,7 @@
     <section class="jumbotron text-center text-white" style="height: 105vh; display: block;">
         <div class="container py-5 mt-4">
             <h1 class="animate__animated animate__fadeInDownBig mt-5 jumbotron-heading text-shadow display-4 py-3">Après Apparel Athletes</h1>
-            <h3 class="animate__animated animate__fadeIn animate__delay-0.5s lead text-white text-shadow" style="font-size: large;">At Après, we love to support athletes on their journey to becoming
+            <h3 class="animate__animated animate__fadeIn animate__delay-1s lead text-white text-shadow" style="font-size: large;">At Après, we love to support athletes on their journey to becoming
                 the best
                 versions of themselves.
                 <br>
@@ -19,8 +19,8 @@
             <p class="animate__animated animate__fadeInLeftBig animate__delay-2s lead text-white text-shadow mt-3" style="font-size: large;">No matter the sport.</p>
 
             <hr class="py-3">
-            <h2 class="animate__animated animate__fadeIn animate__delay-2s lead text-white text-shadow mt-1" style="font-size: x-large;">Want to learn more about us ?</h2>
-            <p class="animate__animated animate__fadeInUpBig animate__delay-6s py-2">
+            <h2 class="animate__animated animate__fadeIn animate__delay-3s lead text-white text-shadow mt-1" style="font-size: x-large;">Want to learn more about us ?</h2>
+            <p class="animate__animated animate__fadeInUpBig animate__delay-4s py-2">
                 <a href="{% url 'teams' %}" class="btn btn-lg btn-ath btn-outline-black">Our Team</a>
                 <a href="{% url 'products' %}" class="btn btn-lg btn-ath btn-outline-black">Our Products</a>
             </p>
@@ -32,8 +32,8 @@
         </div>
     </section>
 
-    <section class="athlete-section py-4 mx-2" id="athlete-section">
-        <h3 class="text-center py-5 mx-2">Check out some of our athletes & what they do below</h3>
+    <section class="athlete-section mx-2" id="athlete-section">
+        <h3 class="text-center py-4 mx-2">Check out some of our athletes & what they do below</h3>
         <div class="row px-3 mx-1">
             {% for athlete in athletes %}
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
