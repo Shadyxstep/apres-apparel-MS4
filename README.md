@@ -1,8 +1,8 @@
-# <a href="https://apresapparel.herokuapp.com/">Après Apparel</a>
+# <a href="https://apres-apparel.herokuapp.com/">Après Apparel</a>
 
 ![responsive_screenshot]()
 
-This [project](https://apresapparel.herokuapp.com/) is my fourth milestone project (Full Stack Frameworks with Django) in Full Stack Software Development course run by [Code Institute](https://codeinstitute.net/)
+This [project](https://apres-apparel.herokuapp.com/) is my fourth milestone project (Full Stack Frameworks with Django) in Full Stack Software Development course run by [Code Institute](https://codeinstitute.net/)
 
 Après Apparel is an outdoor lifestyle brand founded by my friend, Stephen Rice, with the main aim of manifesting a positive brand image & culture amongst those who lead active lifestyles whilst also supplying apparel & accessories to suit 
 those lifestyles.
