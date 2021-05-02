@@ -69,63 +69,64 @@ i.fas.fa-running.fa-lg:hover {
     color: grey;
 }
 
-@keyframes showTopText {
-  0% { transform: translate3d(0, 100%, 0); }
-  40%, 60% { transform: translate3d(0, 50%, 0); }
-  100% { transform: translate3d(0, 0, 0); }
+.jumbotron {
+    text-align:center;
+    background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
+    color:#555;
+    font-family:'Roboto';
+    font-weight:300;
+    font-size:32px;
+    padding-top:40vh;
+    height:100vh;
+    overflow:hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
 }
-@keyframes showBottomText {
-  0% { transform: translate3d(0, -100%, 0); }
-  100% { transform: translate3d(0, 0, 0); }
+
+.escape,
+.experience {
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
 }
-.animated-title {
-  color: #222;
-  font-family: Roboto, Arial, sans-serif;
-  height: 90vmin;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 90vmin;
+
+.escape {
+    animation: showup 7s infinite;
 }
-.animated-title > div {
-  height: 50%;
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
+
+.experience {
+    width:0px;
+    animation: reveal 7s infinite;
 }
-.animated-title > div div {
-  font-size: 12vmin;
-  padding: 2vmin 0;
-  position: absolute;
+
+.experience span {
+    margin-left:-355px;
+    animation: slidein 7s infinite;
 }
-.animated-title > div div span {
-  display: block;
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
 }
-.animated-title > div.text-top {
-  border-bottom: 1vmin solid #000;
-  top: 0;
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
 }
-.animated-title > div.text-top div {
-  animation: showTopText 1s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
-  bottom: 0;
-  transform: translate(0, 100%);
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
 }
-.animated-title > div.text-top div span:first-child {
-  color: #767676;
-}
-.animated-title > div.text-bottom {
-  bottom: 0;
-}
-.animated-title > div.text-bottom div {
-  animation: showBottomText 0.5s;
-  animation-delay: 1.75s;
-  animation-fill-mode: forwards;
-  top: 0;
-  transform: translate(0, -100%);
-}
+
 
 /* Float four columns side by side */
 .column {
