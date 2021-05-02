@@ -7,7 +7,44 @@ This [project](https://apresapparel.herokuapp.com/) is my fourth milestone proje
 Après Apparel is an outdoor lifestyle brand founded by my friend, Stephen Rice, with the main aim of supplying apparel & accessories to suit 
 your outdoor lifestyle.
 
- 
+---
+
+## Table of Contents
+1. [**UX**](#ux)
+    - [**User Stories**](#user-stories)
+    - [**Design**](#design)
+        - [**Framework**](#framework)
+        - [**Color Scheme**](#color-scheme)
+        - [**Icons**](#icons)
+        - [**Typography**](#typography)
+    - [**Wireframes**](#wireframes)
+
+2. [**Features**](#features)
+    - [**Existing Features**](#existing-features)
+    - [**Features Left to Implement**](#features-left-to-implement)
+
+3. [**Technologies Used**](#technologies-used)
+    - [**Front-End Technologies**](#front-end-technologies)
+    - [**Back-End Technologies**](#back-end-technologies)
+
+4. [**Testing**](#testing)
+    - [**Validators**](#validators)
+    - [**Compatibility**](#compatibility)
+    - [**Known Issues**](#known-issues)
+    - [**Automated Testing**](#automated-testing)
+
+5. [**Deployment**](#deployment)
+    - [**Local Deployment**](#local-deployment)
+    - [**Remote Deployment**](#remote-deployment)
+
+6. [**Credits**](#credits)
+    - [**Content**](#content)
+    - [**Media**](#media)
+    - [**Code**](#code)
+    - [**Acknowledgements**](#acknowledgements)
+
+---
+
 ## UX
  
 This e-commerce site is made for those who love adventuring and the outdoors!
