@@ -138,10 +138,10 @@
                     <h4 class="logo-font text-dark">
                         {{ team.role }} for Après Apparel</h4>
                     <div class="col py-2 text-center">
-                        <a class="icon-team" href="#"><i class="fab fa-instagram fa-lg"
+                        <a class="icon-team" href="{{ team.social_url }}"><i class="fab fa-instagram fa-lg"
                                 style="font-size: 2.5rem; color:rgb(0, 0, 0);"></i></a>
                         {% if team.social_url2 %}
-                        <a class="icon-team" href="#"><i class="fab fa-linkedin fa-lg"
+                        <a class="icon-team" href="{{ team.social_url2 }}"><i class="fab fa-linkedin fa-lg"
                                 style="font-size: 2.5rem; color:rgb(0, 0, 0);"></i></a>
                         {% endif %}
                     </div>
@@ -182,10 +182,10 @@
                     <h4 class="logo-font text-white text-shadow">
                         {{ team.role }} for Après Apparel</h4>
                     <div class="col py-2 text-center">
-                        <a class="icon-team" href="#"><i class="fab fa-instagram fa-lg"
+                        <a class="icon-team" href="{{ team.social_url }}"><i class="fab fa-instagram fa-lg"
                                 style="font-size: 2.5rem; color:rgb(255, 255, 255);"></i></a>
                         {% if team.social_url2 %}
-                        <a class="icon-team" href="#"><i class="fab fa-linkedin fa-lg"
+                        <a class="icon-team" href="{{ team.social_url2 }}"><i class="fab fa-linkedin fa-lg"
                                 style="font-size: 2.5rem; color:rgb(255, 255, 255);"></i></a>
                         {% endif %}
                     </div>
