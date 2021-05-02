@@ -2,11 +2,6 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container mb-0">
-    <div class="row mb-0">
-        <div class="col mb-0"></div>
-    </div>
-</div>
 {% endblock %}
 
 {% block content %}
@@ -15,17 +10,17 @@
 
     <section class="jumbotron text-center text-white" style="height: 100vh; display: block;">
         <div class="container">
-            <h1 class="jumbotron-heading text-shadow display-4 py-3">Après Apparel Athletes</h1>
-            <h3 class="lead text-white text-shadow" style="font-size: large;">At Après, we love to support athletes on their journey to becoming
+            <h1 class="animate__animated animate__fadeInDownBig jumbotron-heading text-shadow display-4 py-3">Après Apparel Athletes</h1>
+            <h3 class="animate__animated animate__fadeIn animate__delay-0.75s lead text-white text-shadow" style="font-size: large;">At Après, we love to support athletes on their journey to becoming
                 the best
                 versions of themselves.
                 <br>
             </h3>
-            <p class="lead text-white text-shadow mt-3" style="font-size: large;">No matter the sport.</p>
+            <p class="animate__animated animate__fadeIn animate__delay-1.5s lead text-white text-shadow mt-3" style="font-size: large;">No matter the sport.</p>
 
             <hr class="py-3">
-            <h2 class="lead text-white text-shadow mt-1" style="font-size: x-large;">Want to learn more about us ?</h2>
-            <p class="py-2">
+            <h2 class="animate__animated animate__fadeIn animate__delay-2s lead text-white text-shadow mt-1" style="font-size: x-large;">Want to learn more about us ?</h2>
+            <p class="animate__animated animate__fadeInUpBig animate__delay-2.5s py-2">
                 <a href="{% url 'teams' %}" class="btn btn-lg btn-ath btn-outline-black">Our Team</a>
                 <a href="{% url 'products' %}" class="btn btn-lg btn-ath btn-outline-black">Our Products</a>
             </p>
