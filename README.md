@@ -174,14 +174,10 @@ Another reason for the monochromatic color scheme is that it provides high contr
 ### Back-End Technologies
 
 
-- ![Python]
-    - [Python 3.6.7](https://www.python.org/) - Used as the back-end programming language.
-- ![Django]
-    - [Django 2.2.16](https://docs.djangoproject.com/en/2.2/) - Used as my Python web framework.
-- ![Heroku]
-    - [Heroku](https://www.heroku.com) - Used for *"Platform as a Service"* (PaaS) for app hosting.
-- ![PostgreSQL 11.4]
-    - [PostgreSQL 11.4](https://www.postgresql.org/) - Used as relational SQL database plugin via Heroku.
+- [Python 3.6.7](https://www.python.org/) - Used as the back-end programming language.
+- [Django 2.2.16](https://docs.djangoproject.com/en/2.2/) - Used as my Python web framework.
+- [Heroku](https://www.heroku.com) - Used for *"Platform as a Service"* (PaaS) for app hosting.
+- [PostgreSQL 9.6](https://www.postgresql.org/) - Used as relational SQL database plugin via Heroku.
     
 
 Further details on all Python packages used on this project can be found in the [requirements.txt](project/requirements.txt) file. Each of these is outlined below (click below to expand the dropdown), with the package version and a brief description.
