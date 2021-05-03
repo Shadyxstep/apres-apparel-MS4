@@ -158,18 +158,18 @@ Another reason for the monochromatic color scheme is that it provides high contr
 
 ### Front-End Technologies
 
-- ![HTML5]
-    - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - Used as the base for markup text.
-- ![CSS3]
-    - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) - Used as the base for cascading styles.
-- ![jQuery 3.4.1]
-    - [jQuery 3.4.1](https://code.jquery.com/jquery/) - Used as the primary JavaScript functionality.
-- ![Bootstrap 4]
-    - [Bootstrap 4.6.0](https://getbootstrap.com/) - Used as the front-end framework for layout and design.
-- ![Stripe API]
-    - [Stripe API](https://stripe.com/docs/api?lang=python) - Used to make secured payments on *Feature Tickets*.
-- ![Amazon AWS S3]
-    - [Amazon AWS S3](https://aws.amazon.com/) - Used to store *staticfiles* and *media* folders and files.
+
+- [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - Used as the base for markup text.
+
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) - Used as the base for cascading styles.
+
+- [jQuery 3.4.1](https://code.jquery.com/jquery/) - Used as the primary JavaScript functionality.
+
+- [Bootstrap 4.6.0](https://getbootstrap.com/) - Used as the front-end framework for layout and design.
+
+- [Stripe API](https://stripe.com/docs/api?lang=python) - Used to make secured payments on *Feature Tickets*.
+
+- [Amazon AWS S3](https://aws.amazon.com/) - Used to store *staticfiles* and *media* folders and files.
 
 ### Back-End Technologies
 
