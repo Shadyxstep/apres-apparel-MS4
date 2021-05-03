@@ -394,11 +394,11 @@ a.icon-team {
 
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 120px;
+        padding-top: 116px;
     }
 
     body {
-        height: calc(100vh - 120px);
+        height: calc(100vh - 116px);
     }
 
     .display-4.logo-font.text-black {
@@ -443,10 +443,6 @@ a.icon-team {
 
     .increment-qty, .decrement-qty {
         padding: 0.25rem .5rem !important;
-    }
-
-    #delivery-banner h4 {
-        font-size: .9rem;
     }
 
 }

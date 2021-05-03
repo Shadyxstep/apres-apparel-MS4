@@ -1,6 +1,6 @@
 # <a href="https://apres-apparel.herokuapp.com/">Après Apparel</a>
 
-![responsive_screenshot]()
+![responsive_screenshot](media/readme-imgs/amiresponsive-apres.JPG)
 
 This [project](https://apres-apparel.herokuapp.com/) is my fourth milestone project (Full Stack Frameworks with Django) in Full Stack Software Development course run by [Code Institute](https://codeinstitute.net/)
 
@@ -50,7 +50,8 @@ The Après Apparel vision is to build a strong following around the brand & its 
 
 This project is part of my [Code Institute](https://codeinstitute.net/) Full Stack Software Development Diploma Course, specifically the **Full Stack Frameworks** module.
 The objective for this project is to "Create a web application that allows users to browse & purchase products, register/login/logout & provide delivery information securely, display team members behind the brand & real athletes we wish to support in future." 
-This e-commerce site is made for those who love sport, adventuring and the outdoors!
+
+This e-commerce site is made for those who love adventuring, sports and the outdoors!
 We also have a section dedicated to athletes we support & follow, and the team members behind the Après Apparel brand, with social media links provided
 for any curious visitors to site to check out.
 
@@ -59,11 +60,11 @@ for any curious visitors to site to check out.
 :white_check_mark: *denotes items that have been successfully implemented*
 
 - :white_check_mark: *view the site* from **any device** *(mobile, tablet, desktop)*.
-- :white_check_mark: *view all products* as a **Guest**.
-- :white_check_mark: *view individual product details* as a **Guest**.
-- :white_check_mark: *add products to my shopping bag* as a **Guest**.
-- :white_check_mark: *remove products from my shopping bag* as a **Guest**.
-- :white_check_mark: *manage products in my shopping bag* as a **Guest**
+- :white_check_mark: *view all products* as a **Guest** and **Registered User**.
+- :white_check_mark: *view individual product details* as a **Guest** and **Registered User**.
+- :white_check_mark: *add products to my shopping bag* as a **Guest** and **Registered User**.
+- :white_check_mark: *remove products from my shopping bag* as a **Guest** and **Registered User**.
+- :white_check_mark: *manage products in my shopping bag* as a **Guest** and **Registered User**.
 - :white_check_mark: *sort/order products* by **name, category, price, rating**.
 - :white_check_mark: *search products* by **name, category, description**.
 - :white_check_mark: **limit** the number of *products* to display by name (alphabetical sorting), product category type, or see *all products*.
@@ -79,8 +80,9 @@ for any curious visitors to site to check out.
 
 ### Design 
 
-- The design of the Après Apparel website is a monochromatic color scheme to fit in line with a simplistic high contrast aesthetic, with various star/sunset background images used across the site to 
+- The design of the Après Apparel website is a monochromatic Black/White/Grey color scheme to fit in line with a simple high contrast aesthetic, with various star/sunset background images used across the site to 
 symbolize the outdoor lifestyle the brand wishes to promote.
+I personally prefer to create my websites with a light/dark theme and avoid brighter colours as I feel it can impede on readability for the user.
 
 #### Framework
 
@@ -93,8 +95,18 @@ symbolize the outdoor lifestyle the brand wishes to promote.
 
 #### Color Scheme
 
-- Color scheme is a simple monochromatic scheme (Predominantly Black / White) which fits in with the Surf/Mountain aesthetic the brand falls in line with.
-Another reason for the monochromatic color scheme is that it provides high contrast between text & background elements which makes it easier for visitors to visually distinguish and navigate the site.
+- As I favour simplicity & high contrast over popping colours when designing website, the color scheme used for this website is a simple Black/White/Grey monochromatic theme.
+
+- ![#fff](https://via.placeholder.com/15/fff/000000?text=+) `#fff`
+- ![#696969](https://via.placeholder.com/15/696969/000000?text=+) `#696969`
+- ![#000](https://via.placeholder.com/15/f03c15/000000?text=+) `#000`
+
+My main reason for a basic white/grey/black monochromatic color scheme is that it provides high contrast between text & background elements which makes readability easier for visitors who visit the site.
+I've been inspired in the past by tech giant Apple's UX, where they favour simplicity & grayscale monochromatic color schemes.
+This particular color scheme also fits in with the simple aesthetic the brand owner of Après Apparel is trying to achieve.
+
+White is the predominant theme of the website with black being reserved for button outlines & texts for extra readability.
+The white background also helps the product images pop out visually for the site visitors as they are mostly bright & colourful.
 
 #### Icons
 
@@ -179,5 +191,6 @@ Another reason for the monochromatic color scheme is that it provides high contr
 - [Heroku](https://www.heroku.com) - Used for *"Platform as a Service"* (PaaS) for app hosting.
 - [PostgreSQL 9.6](https://www.postgresql.org/) - Used as relational SQL database plugin via Heroku.
     
+The environment requirements for this project are shown below :
 
-Further details on all Python packages used on this project can be found in the [requirements.txt](project/requirements.txt) file. Each of these is outlined below (click below to expand the dropdown), with the package version and a brief description.
+![responsive_screenshot](media/readme-imgs/requirementstxt-apresapparel.JPG)
