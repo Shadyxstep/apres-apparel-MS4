@@ -10,7 +10,6 @@ from .forms import ProductForm
 # Additional Security for Add/Edit/Delete Product Views
 # from django.contrib.auth.decorators import user_passes_test
 
-# Create your views here.
 
 def all_products(request):
     """ A view to show all products """
@@ -44,10 +43,16 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!"
+                    )
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(
+                name__icontains=query
+                ) | Q(
+                    description__icontains=query
+                    )
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -79,7 +84,10 @@ def product_detail(request, product_id):
 def add_product(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you do not have authorisation for that action.')
+        messages.error(
+            request, 'Sorry, you do not have\
+                 authorisation for that action.'
+                 )
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -89,10 +97,13 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form input is valid.')
+            messages.error(
+                request, 'Failed to add product.\
+                     Please ensure the form input is valid.'
+                     )
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -100,11 +111,15 @@ def add_product(request):
 
     return render(request, template, context)
 
+
 @login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you do not have authorisation for that action.')
+        messages.error(
+            request, 'Sorry, you do not have\
+                 authorisation for that action.'
+                 )
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
@@ -115,7 +130,10 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to update product.\
+                     Please ensure the form is valid.'
+                     )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -128,13 +146,17 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
+
 @login_required
 def delete_product(request, product_id):
     """ Delete a product from the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you do not have authorisation for that action.')
+        messages.error(
+            request, 'Sorry, you do not \
+                have authorisation for that action.'
+                )
         return redirect(reverse('home'))
-    
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')
