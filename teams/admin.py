@@ -20,5 +20,6 @@ class AthleteAdmin(admin.ModelAdmin):
         'social_url',
     )
 
+
 admin.site.register(Team, TeamAdmin)
 admin.site.register(Athletes, AthleteAdmin)

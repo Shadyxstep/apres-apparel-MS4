@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .models import Team, Athletes
 
-# Create your views here.
 
 def all_team_members(request):
     """ A view to show all team members """
