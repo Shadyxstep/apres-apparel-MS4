@@ -100,7 +100,7 @@ i.fas.fa-home.fa-lg:hover {
 
 .img-fluid {
     width: auto;
-    max-height: 300px;
+    max-height: 250px;
 }
 
 .img-container {
@@ -143,6 +143,21 @@ a.category-badge > span.badge:hover {
     height: 2px;
 }
 
+/* Product Page */
+
+.card {
+    border: none;
+}
+
+/* Product Category Badges */
+
+.category-badge {
+    font-size: x-large;
+}
+
+.btn-outline-black:hover {
+    background-color: #696969;
+}
 /* Product Form */
 
 .btn-file {
@@ -467,6 +482,11 @@ a.icon-team {
 
     .jumbotron-team {
         font-size: 2rem;
+    }
+
+    .img-fluid {
+        width: auto;
+        height: 275px;
     }
 
     
