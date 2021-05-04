@@ -40,7 +40,9 @@
                 <div class="card h-100 border-0">
                     {% if athlete.image %}
                     <div class="img-container">
+                    <a href="{% url 'athlete_detail' athlete.id %}">
                         <img class="card-img-athlete img-fluid" src="{{ athlete.image_url }}" alt="{{ athlete.name }}">
+                    </a>
                         {% else %}
                         <img class="card-img-athlete img-fluid" src="{{ MEDIA_URL }}noimage.png"
                             alt="{{ product.name }}">

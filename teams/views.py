@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Team, Athletes
 
 
@@ -24,3 +24,14 @@ def all_athletes(request):
     }
 
     return render(request, 'athletes/athletes.html', context)
+
+
+def athlete_detail(request, athlete_id):
+    """A view to show individual blog post"""
+    athlete = get_object_or_404(Athletes, pk=athlete_id)
+
+    context = {
+        'athlete': athlete,
+    }
+
+    return render(request, 'athletes/athlete_detail.html', context)

@@ -331,8 +331,24 @@ a.icon-ath {
     margin-right: 0.75rem;
 }
 
+.ath-detail {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    padding: 1rem;
+    margin-right: 0.75rem;
+}
+
+a.ath-detail:hover {
+    color: rgb(70, 70, 70);
+}
+
 a.icon-ath:hover {
-    color: rgb(117, 234, 255);
+    color: rgb(70, 70, 70);
 }
 
 .img-container {
