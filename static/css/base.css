@@ -68,7 +68,7 @@ i.fas.fa-user-friends.fa-lg:hover,
 i.fas.fa-tshirt.fa-lg:hover,
 i.fas.fa-running.fa-lg:hover,
 i.fas.fa-home.fa-lg:hover {
-    color: grey !important;
+    color: rgb(70, 70, 70) !important;
 }
 
 .border-black {
@@ -100,7 +100,7 @@ i.fas.fa-home.fa-lg:hover {
 
 .img-fluid {
     width: auto;
-    max-height: 250px;
+    height: 300px;
 }
 
 .img-container {
