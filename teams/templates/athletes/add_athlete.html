@@ -11,9 +11,9 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container mb-3 text-center" style="min-height: 50vh;">
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 offset-md-3 col-sm-12">
                 <hr>
                 <h2 class="logo-font mb-4">Athlete Management</h2>
                 <h5 class="text-muted">Add an Athlete</h5>
@@ -22,7 +22,7 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 offset-md-3 col-sm-12">
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
