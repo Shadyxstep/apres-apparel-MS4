@@ -38,6 +38,13 @@
                     <a class="ath-detail" href="{{ athlete.social_url }}"><i class="fab fa-instagram fa-xl"></i></a>
                     <a class="ath-detail" href="{{ athlete.social_url2 }}"><i class="fab fa-linkedin fa-xl"></i></a>
                 </div>
+                {% if request.user.is_superuser %}
+                <small class="text-center pt-2">
+                    <a class="text-primary form-link mr-2" href="{% url 'edit_athlete' athlete.id %}">Edit</a>
+                    <span class="text-black"> | </span> 
+                    <a class="text-danger ml-2" href="{% url 'delete_athlete' athlete.id %}">Delete</a>
+                </small>
+                {% endif %}
             </div>
         </div>
     </div>

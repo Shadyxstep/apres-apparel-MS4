@@ -68,3 +68,53 @@ def add_athlete(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def edit_athlete(request, athlete_id):
+    """ Edit a product in the store """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Sorry, you do not have\
+                 authorisation for that action.'
+                 )
+        return redirect(reverse('home'))
+
+    athlete = get_object_or_404(Athletes, pk=athlete_id)
+    if request.method == 'POST':
+        form = AthleteForm(request.POST, request.FILES, instance=athlete)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated Athlete!')
+            return redirect(reverse('athlete_detail', args=[athlete.id]))
+        else:
+            messages.error(
+                request, 'Failed to update product.\
+                     Please ensure the form is valid.'
+                     )
+    else:
+        form = AthleteForm(instance=athlete)
+        messages.info(request, f'You are editing {athlete.name}')
+
+    template = 'athletes/edit_athlete.html'
+    context = {
+        'form': form,
+        'athlete': athlete,
+    }
+
+    return render(request, template, context)
+
+
+
+@login_required
+def delete_athlete(request, athlete_id):
+    """ Delete an athlete """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    athlete = get_object_or_404(Athletes, pk=athlete_id)
+    athlete.delete()
+    messages.success(request, f'{athlete.name} deleted!')
+    return redirect(reverse('athletes'))
+
