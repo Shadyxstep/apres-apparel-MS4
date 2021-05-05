@@ -45,8 +45,10 @@
                                     style="font-size: 2rem; color: rgb(0, 0, 0);"></i></a>
                         </h4>
                     </div>
-                    <img src="{{ team.image_url }}" class="team-img mt-2"
-                        style="border-radius: 50%; height: 300px; width: auto;">
+                    <a href="{% url 'team_detail' team.id %}">
+                        <img src="{{ team.image_url }}" class="team-img mt-2"
+                            style="border-radius: 50%; height: 300px; width: auto;">
+                    </a>
                     <h2 class="display-5 logo-font text-dark mt-2">
                         <strong>{{ team.name }}</strong></h2>
                     <h4 class="logo-font text-dark">
@@ -84,8 +86,10 @@
                                     class="fas fa-chevron-up"
                                     style="font-size: 2rem; color: rgb(255, 255, 255);"></i></a>
                     </div>
-                    <img src="{{ team.image_url }}" class="team-img mt-2"
-                        style="border-radius: 50%; height: 300px; width: auto;">
+                    <a href="{% url 'team_detail' team.id %}">
+                        <img src="{{ team.image_url }}" class="team-img mt-2"
+                            style="border-radius: 50%; height: 300px; width: auto;">
+                    </a>
                     <h2 class="display-5 logo-font text-white mt-2">
                         <strong>{{ team.name }}</strong></h2>
                     <h4 class="logo-font text-white">
@@ -123,8 +127,10 @@
                                     class="fas fa-chevron-up" style="font-size: 2rem; color: rgb(0, 0, 0);"></i></a>
                         </h4>
                     </div>
-                    <img src="{{ team.image_url }}" class="team-img mt-2"
-                        style="border-radius: 50%; height: 300px; width: auto;">
+                    <a href="{% url 'team_detail' team.id %}">
+                        <img src="{{ team.image_url }}" class="team-img mt-2"
+                            style="border-radius: 50%; height: 300px; width: auto;">
+                    </a>
                     <h2 class="display-5 logo-font text-dark mt-2">
                         <strong>{{ team.name }}</strong></h2>
                     <h4 class="logo-font text-dark">
@@ -162,9 +168,10 @@
                                     class="fas fa-chevron-up"
                                     style="font-size: 2rem; color: rgb(255, 255, 255);"></i></a>
                     </div>
-
-                    <img src="{{ team.image_url }}" class="team-img mt-2"
-                        style="border-radius: 50%; height: 300px; width: 300px;">
+                    <a href="{% url 'team_detail' team.id %}">
+                        <img src="{{ team.image_url }}" class="team-img mt-2"
+                            style="border-radius: 50%; height: 300px; width: 300px;">
+                    </a>
                     <h2 class="display-5 logo-font text-white text-shadow mt-2">
                         <strong>{{ team.name }}</strong></h2>
                     <h4 class="logo-font text-white text-shadow">

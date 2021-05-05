@@ -9,4 +9,9 @@ urlpatterns = [
     path('edit/<int:athlete_id>', views.edit_athlete, name='edit_athlete'),
     path('delete/<int:athlete_id>', views.delete_athlete,
          name='delete_athlete'),
+    path('teams/<int:team_id>', views.team_detail, name='team_detail'),
+    path('teams/add/', views.add_team, name='add_team'),
+    path('teams/edit/<int:team_id>', views.edit_team, name='edit_team'),
+    path('teams/delete/<int:team_id>', views.delete_team,
+         name='delete_team'),
 ]

@@ -371,20 +371,30 @@ I have also checked compatibility of the site across various modern browsers and
 - [JShint](https://jshint.com/)
     - **Stripe.js** - [stripe_elements.js File](https://github.com/Shadyxstep/apres-apparel-MS4/blob/d4eec8eeb85a53bdb29b29875f38028479dace3c/checkout/static/checkout/js/stripe_elements.js)
         - The javascript for strip_elements was taken from Stripe Documentation.
-        - Errors include 
+        - Minor errors include:
             -	*template literal syntax' is only available in ES6 (use 'esversion: 6').*
             -   *Missing semicolon*
             -   *'$' is not defined.*
+            -   *'Stripe' is not defined.*
 
     - ![js_validation](media/readme-imgs/stripe-jscode-validator.JPG)
 
 
     - **Scripts** -
-        - The rest of my JS code are scripts located at the bottom of various HTML pages. These scripts include:
+        - The rest of my JS code are jQuery scripts located at the bottom of various HTML pages. These scripts include:
             - Toast Messages alerting the user whether an action they took was successful/unsuccessful.
             - Button on bottom right that allows users to navigate back to top of the current page with a click.
+            - Updating quantity of items using 
 
         - No major errors found in any of the script code, however these warnings showed up relating to the syntax of `<script type=text/javascript>`.
             - Those errors are shown below.
         
         - ![js_script_validation](media/readme-imgs/js-validator-errors.JPG)
+
+**Python**
+
+- [PEP8 Online](http://pep8online.com/)
+    - All **32 .py** files checked.
+    - Entirely **PEP8 compliant** with one exception:
+        - `settings.py` [file](project/main/settings.py) (the built-in Django settings file has a known issue, but is acceptable to not force a line break - I have tested these lines to be pep8 compliant and it caused errors in signup form password validation.)
+        - *line too long (>79 characters)* -  `AUTH_PASSWORD_VALIDATORS = [{}]` x4
