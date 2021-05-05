@@ -318,9 +318,17 @@ A thorough mix of automated and manual testing have gone into building this proj
 In addition to tests, I have used online code validation sites for the code in this project. 
 I have also checked compatibility of the site across various modern browsers and devices.
 
+
 **HTML**
 - [W3C HTML Validator](https://validator.w3.org)
-    
+    - I have run all **21 files in this project through an online HTML validator.
+    - **3 .html files contained minor issues that have since been rectified - taking out unused h4 headings. [Correction Commit: d4eec8e](https://github.com/Shadyxstep/apres-apparel-MS4/commit/d4eec8eeb85a53bdb29b29875f38028479dace3c)
+    - The remaining validation issues are all attributed to Django Templating not being recognized by W3C:
+        - **Warning**: Consider adding a `lang` attribute to the `html` start tag to declare the language of this document.
+        - **Error**: Non-space characters found without seeing a doctype first. Expected `<!DOCTYPE html>`.
+        - **Warning**: This document appears to be written in English. Consider adding `lang="en"` (or variant) to the `html` start tag.
+        - **Error**: Element `head` is missing a required instance of child element `title`.
+
 
 **CSS**
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
@@ -329,7 +337,7 @@ I have also checked compatibility of the site across various modern browsers and
         - .accordion -> "Property overflow-anchor doesn't exist : none"
         
     - The W3C Jigsaw validator does not yet recognize elements imported in from the AnimateCSS library used in this project, and therefore passes 34 **Parse Errors**. The elements from AnimateCSS in my landing page headings are not recognized by the CSS Validator. The Parse Errors I've received are:
-        -![css_validation](media/readme-imgs/css-validation-errors-AnimateCSS.JPG)
+        - ![css_validation](media/readme-imgs/css-validation-errors-AnimateCSS.JPG)
 
     - I also received these **Warnings** which are all coming from the validator not recognizing vendor extensions from Bootstrap4 and AnimateCSS:
 
@@ -346,3 +354,15 @@ I have also checked compatibility of the site across various modern browsers and
         - `--purple` is an unknown vendor extension
         - `--pink` is an unknown vendor extension
         - `--red` is an unknown vendor extension
+
+
+**JavaScript**
+
+- [JShint](https://jshint.com/)
+    - **stripe.js** - [stripe_elements.js](https://github.com/Shadyxstep/apres-apparel-MS4/blob/d4eec8eeb85a53bdb29b29875f38028479dace3c/checkout/static/checkout/js/stripe_elements.js)
+    ![js_validation](media/readme-imgs/stripe-jscode-validator.JPG)
+
+    - **scripts** -
+        - The rest of my JS code are scripts located at the bottom of various HTML pages
+        - No major errors found in any of the script code, however these warnings showed up relating to the syntax of `<script type=text/javascript>`.
+        ![js_script_validation](media/readme-imgs/js-validator-errors.JPG)
