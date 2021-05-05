@@ -105,7 +105,6 @@ def edit_athlete(request, athlete_id):
     return render(request, template, context)
 
 
-
 @login_required
 def delete_athlete(request, athlete_id):
     """ Delete an athlete """
@@ -117,4 +116,3 @@ def delete_athlete(request, athlete_id):
     athlete.delete()
     messages.success(request, f'{athlete.name} deleted!')
     return redirect(reverse('athletes'))
-

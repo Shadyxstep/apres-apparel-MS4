@@ -16,6 +16,7 @@ from bag.contexts import bag_contents
 import stripe
 import json
 
+
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -70,7 +71,9 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
+                        for size, quantity in (
+                            item_data['items_by_size'].items()
+                                ):
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -80,7 +83,8 @@ def checkout(request):
                             order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
+                        "One of the products in\
+                             your bag wasn't found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -88,14 +92,18 @@ def checkout(request):
 
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_successful', args=[order.order_number]))
+            return redirect(reverse(
+                'checkout_successful', args=[order.order_number])
+                )
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(
+                request, "There's nothing in your bag at the moment"
+                )
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
