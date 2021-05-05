@@ -199,15 +199,15 @@ The white background also helps the product images pop out visually for the site
 
 - Home Page
 
-- ![Home Page](media/wireframes/home-page-wireframe.JPG)
+![Home Page](media/wireframes/home-page-wireframe.JPG)
 
 - Product Page
 
-- ![Product Page](media/wireframes/product-page-wireframe.JPG)
+![Product Page](media/wireframes/product-page-wireframe.JPG)
 
 - Team Page
 
-- ![Team Page](media/wireframes/team-page-wireframe.JPG)
+![Team Page](media/wireframes/team-page-wireframe.JPG)
 
 #### Features
  
@@ -515,13 +515,13 @@ This project can be viewed live on Heroku: [https://apres-apparel.herokuapp.com]
 **PLEASE NOTE**: My Static & Media files are hosted on Amazon AWS in an S3-Bucket. My media files were pushed to GitHub purely for project assessment purposes only at the end of development! My *static* file contains the following folders and files:
 
 - **css/**
-    - *[styles.css](project/static/css/styles.css)*
+    - *[styles.css](apres-apparel-ms4/static/css/styles.css)*
 - **media/**
     - all images used for the project
 - **js/**
     - *[scripts.js](bottom of page in: bag/templates/bag/bag.html, products/templates/products/products.html, teams/templates/teams/team.html, teams/templates/athletes/athlete.html )*
-    - *[stripe.js](project/checkout/static/checkout/js/stripe_elements.js)*
-    - *[countryfields.js](project/profiles/js/countryfield.js)*
+    - *[stripe.js](apres-apparel-ms4/checkout/static/checkout/js/stripe_elements.js)*
+    - *[countryfields.js](apres-apparel-ms4/profiles/js/countryfield.js)*
 
 
 ### Local Deployment
