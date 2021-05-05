@@ -321,14 +321,17 @@ The environment dependencies/ requirements for this project are shown below :
 
 ![responsive_screenshot](media/readme-imgs/requirementstxt-apresapparel.JPG)
 
-#### Testing
+### Testing
 
 A thorough mix of automated and manual testing have gone into building this project. 
 In addition to tests, I have used online code validation sites for the code in this project. 
 I have also checked compatibility of the site across various modern browsers and devices.
 
+#### Validators
+
 
 **HTML**
+
 - [W3C HTML Validator](https://validator.w3.org)
     - I have run all **21 files in this project through an online HTML validator.
     - **3 .html files contained minor issues that have since been rectified - taking out unused h4 headings. [Correction Commit: d4eec8e](https://github.com/Shadyxstep/apres-apparel-MS4/commit/d4eec8eeb85a53bdb29b29875f38028479dace3c)
@@ -340,6 +343,7 @@ I have also checked compatibility of the site across various modern browsers and
 
 
 **CSS**
+
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
     - The W3C Jigsaw validator shows Bootstrap4 2 errors coming from URI: *"https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"*
     The errors are:
@@ -394,7 +398,70 @@ I have also checked compatibility of the site across various modern browsers and
 **Python**
 
 - [PEP8 Online](http://pep8online.com/)
-    - All **32 .py** files checked.
+    - All **58 .py** files tested.
     - Entirely **PEP8 compliant** with one exception:
         - `settings.py` [file](project/main/settings.py) (the built-in Django settings file has a known issue, but is acceptable to not force a line break - I have tested these lines to be pep8 compliant and it caused errors in signup form password validation.)
         - *line too long (>79 characters)* -  `AUTH_PASSWORD_VALIDATORS = [{}]` x4
+
+
+### Compatibility
+
+To ensure a broad range of users can successfully use the site, I tested it across the 5 major browsers in both desktop and mobile configuration throughout the development of the project.
+
+- **Chrome** 
+- **Edge** 
+- **Firefox** 
+- **Safari** 
+- **Opera** 
+
+#### Screen Sizes
+
+Using Google Chrome [DevTools](https://developers.google.com/web/tools/chrome-devtools) profiles:
+- **Moto G4**
+- **Galaxy S5**
+- **Pixel 2/ 2XL**
+- **iPhone 5/SE**
+- **iPhone 6/7/8** 
+- **iPhone 6/7/8 Plus** 
+- **iPhone X**
+- **iPad / Pro**
+- **Surface Duo**
+- **Galaxy  Fold**
+
+I also physically tested the website across multiple of my own devices, 
+- Large desktop (2000px)
+- Laptop (1600px)
+- Large Mobiles (425px)
+    - OnePlus 6T
+    - OnePlus 8T
+    - iPhone X
+
+In addition to manually testing responsiveness on various devices, I also seeked out reviews from friends & team members behind the brand in order for them to point out
+any issues they experienced when visiting the site.
+As a result of this, I rectified any responsive issues throughout development by resizing and adding elements to media queries.
+
+#### Chrome's DevTools Audit Report
+
+- [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) - generated the below reports:
+
+**Home Page**
+
+![home_page_performance](media/readme-imgs/home-page-performance.JPG)
+
+**Products Page**
+
+![product_page_performance](media/readme-imgs/product-page-performance.JPG)
+
+**Teams Page**
+
+![product_page_performance](media/readme-imgs/team-page-performance.JPG)
+
+**Athletes Page**
+
+![product_page_performance](media/readme-imgs/athlete-page-performance.JPG)
+
+- As you can see from the above performance ratings of the site (from ), 'performance' score was the lowest across the pages as a result of the imported AnimateCSS classes.
+I am happy to sacrifice a few fractional seconds of performance loading time for the visual effect I was trying to achieve on each pages landing titles.
+
+- I will attempt to use clean Javascript code as an alternative to Animated CSS classes going forward in order to create visually appealing websites without the performance hit.
+
