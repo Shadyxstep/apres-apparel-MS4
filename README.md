@@ -19,6 +19,7 @@ The Après Apparel vision is to build a strong following around the brand & its 
         - [**Color Scheme**](#color-scheme)
         - [**Icons**](#icons)
         - [**Typography**](#typography)
+    - [**Wireframes**](#wireframes)
 
 2. [**Features**](#features)
     - [**Existing Features**](#existing-features)
@@ -35,7 +36,6 @@ The Après Apparel vision is to build a strong following around the brand & its 
     - [**Validators**](#validators)
     - [**Compatibility**](#compatibility)
     - [**Known Issues**](#known-issues)
-    - [**Automated Testing**](#automated-testing)
 
 5. [**Deployment**](#deployment)
     - [**Local Deployment**](#local-deployment)
@@ -193,6 +193,22 @@ The white background also helps the product images pop out visually for the site
 - [Bootstrap](https://getbootstrap.com/) : Typography / Colors Documentation from Bootstrap was used in various headings/texts/alerts around the site such as ".display-x" & ".text-success" classes.
 
 
+#### Wireframes
+
+[Lucid App](https://lucid.app/lucidchart/) - Used for for wireframes & to visualize data schema models.
+
+- Home Page
+
+- ![Home Page](media/wireframes/home-page-wireframe.JPG)
+
+- Product Page
+
+- ![Product Page](media/wireframes/product-page-wireframe.JPG)
+
+- Team Page
+
+- ![Team Page](media/wireframes/team-page-wireframe.JPG)
+
 #### Features
  
 ### Existing Features
@@ -327,6 +343,18 @@ A thorough mix of automated and manual testing have gone into building this proj
 In addition to tests, I have used online code validation sites for the code in this project. 
 I have also checked compatibility of the site across various modern browsers and devices.
 
+- Automated Testing 
+    - Chrome Dev Tools Audit reports
+    - HTML, CSS, JS, Python Code Validators
+    - Testing for screen responsiveness using Chrome Dev Tools.
+
+- Manual Testing
+    - Manually testing for website bugs on various different devices (Phone, Tablet, Desktop.)
+    - Payment testing using Stripe Webhooks.
+    - Manually testing responsiveness on physical devices (Phone, Tablet, Desktop.)
+    - Email Confirmation & Signup Verification using "https://temp-mail.org/en/"
+
+
 #### Validators
 
 
@@ -428,7 +456,7 @@ Using Google Chrome [DevTools](https://developers.google.com/web/tools/chrome-de
 - **Surface Duo**
 - **Galaxy  Fold**
 
-I also physically tested the website across multiple of my own devices, 
+I also physically tested the website across multiple of my own devices.
 - Large desktop (2000px)
 - Laptop (1600px)
 - Large Mobiles (425px)
@@ -465,3 +493,176 @@ I am happy to sacrifice a few fractional seconds of performance loading time for
 
 - I will attempt to use clean Javascript code as an alternative to Animated CSS classes going forward in order to create visually appealing websites without the performance hit.
 
+
+### Known Issues
+
+- As mentioned in **Features Left to implement** section, I attempted to incorporate a contact app within the store so users could have an onsite method to contact 
+store owners via email.
+    - This was successful in my local environment, however unsuccessful in the production version of the website as I tried to create the contact app after deployment to Heroku. This led to problems with me creating and migrating new models to django.
+    Whenever an email was sent when hosted on Heroku, it would return a "Server Not Found: 500 Error".
+    - I am certain I can easily resolve this and implement the feature correctly, however due to project submssion time constraints, I unfortunately have to leave it out in this version.
+
+- I also had issues with registration feature on the website. It would return a "Server Not Found: 500 Error" whenever a user tried to register a new profile.
+    - I had sought out help on slack for this issue but identified and rectified the issue myself by running Heroku logs & checking the logs in my local environment.
+    - I had refactored my code in settings.py to be PEP8 compliant, this was what caused the issue, specifically 'AUTH_PASSWORD_VALIDATORS' as it was throwing up *line too long (>79 characters)* warnings.
+    - After reverting the code back to its original format, the registration issue was resolved.
+
+
+## Deployment
+
+This project can be viewed live on Heroku: [https://apres-apparel.herokuapp.com](https://apres-apparel.herokuapp.com)
+
+**PLEASE NOTE**: My Static & Media files are hosted on Amazon AWS in an S3-Bucket. My media files were pushed to GitHub purely for project assessment purposes only at the end of development! My *static* file contains the following folders and files:
+
+- **css/**
+    - *[styles.css](project/static/css/styles.css)*
+- **media/**
+    - all images used for the project
+- **js/**
+    - *[scripts.js](bottom of page in: bag/templates/bag/bag.html, products/templates/products/products.html, teams/templates/teams/team.html, teams/templates/athletes/athlete.html )*
+    - *[stripe.js](project/checkout/static/checkout/js/stripe_elements.js)*
+    - *[countryfields.js](project/profiles/js/countryfield.js)*
+
+
+### Local Deployment
+
+It's highly recommended to work in a *virtual environment*, but not absolutely required.
+
+In order to run this project locally on your own system:
+
+- [Python3](https://www.python.org/downloads) to run the application.
+- [PIP](https://pip.pypa.io/en/stable/installing) to install all app requirements.
+- [GIT](https://www.atlassian.com/git/tutorials/install-git) for cloning and version control.
+- [GitPod](https://gitpod.io/) (or any suitable IDE) to develop your project.
+
+Next, there's a series of steps to take in order to proceed with local deployment:
+
+- Clone this GitHub repository by either clicking the green "*Clone or download*" button above in order to download the project as a zip-file (remember to unzip it first), or by entering the following command into the Git CLI terminal:
+    - `git clone https://github.com/Shadyxstep/apres-apparel-ms4.git`
+- Navigate to the correct file location after unpacking the files.
+    - `cd <path to folder>`
+- Create a `.env` file with your own credentials. An example *.env* file can be found here ([.env_sample](project/.env_sample)).
+    - *Note: the example .env file contains environmental variables for both local and remote deployment. (see below for remote deployment details)*
+- Install all requirements from the [requirements.txt](project/requirements.txt) file using this command:
+    - `pip3 install -r project/requirements.txt`
+- In the IDE terminal, use the following command to launch the Django project:
+    - `python3 manage.py runserver`
+- The Django server should be running locally now on **http://127.0.0.1:8000** (or similar). If it doesn't automatically open, you can copy/paste it into your browser of choice.
+- When you run the Django server for the first time, it should create a new *SQLite3* database file: **db.sqlite3**
+- Next, you'll need to make migrations to create the database schema:
+    - `python3 manage.py makemigrations`
+    - `python3 manage.py migrate`
+- In order to access the Django *Admin Panel*, you must generate a superuser:
+    - `python3 manage.py createsuperuser`
+    - (assign an admin username, email, and secure password)
+
+Once the database migrations and superuser have been successfully completed, Django should migrate the existing *migrations.py* files from each app to configure the following relational schema:
+
+![Apres Apparel Schema](media/readme-imgs/aa-schema.JPG)
+
+
+### Remote Deployment
+
+This site is currently deployed on [Heroku](https://www.heroku.com/) using the ~~**master**~~ **main** branch on GitHub. Once you have the project setup locally, you can proceed to deploy it remotely with the following steps:
+
+- Create a **requirements.txt** file so Heroku can install the required dependencies to run the app:
+    - `pip3 freeze --local > project/requirements.txt`
+    - The *requirements.txt* file for this project are
+
+    - ![responsive_screenshot](media/readme-imgs/requirementstxt-apresapparel.JPG)
+
+
+- Create a **Procfile** to tell Heroku what type of application is being deployed using *gunicorn*, and how to run it:
+    - `echo web: gunicorn main.wsgi:application > project/Procfile`
+    - The *Procfile* for this project can be found here: [Procfile](https://github.com/Shadyxstep/apres-apparel-MS4/blob/master/Procfile)
+- Sign up for a free Heroku account, create your project app, and click the **Deploy** tab, at which point you can *Connect GitHub* as the Deployment Method, and select *Enable Automatic Deployment*.
+- In the Heroku **Resources** tab, navigate to the *Add-Ons* section and search for **Heroku Postgres**. Make sure to select the free *Hobby* level. This will allow you to have a remote database instead of using the local sqlite3 database, and can be found in the Settings tab. You'll need to update your *.env* file with your new *database-url* details.
+- In the Heroku **Settings** tab, click on the *Reveal Config Vars* button to configure environmental variables. You will need to copy/paste all of the *.env* key value pairs into the config variables, but please omit the *development=1* variable; this is only for local deployment.
+ 
+- Your app should be successfully deployed to Heroku at this point, but there's stil some thing to do!
+- Update the *settings.py* file to connect the remote database using this Python package: `dj_database_url`
+- Re-build the migrations and create a superuser to your new remote database using the instructions in the *local deployment* section above.
+- Sign up for a free [Amazon AWS](https://aws.amazon.com/) account in order to host your *staticfiles* and *media* files. From the **S3 buckets** section, you'll need to create a new unique bucket. Follow these next steps to complete the setup:
+
+**Permissions** > **CORS configuration**:
+
+```
+<Sample Policy>
+<CORSConfiguration>
+<CORSRule>
+    <AllowedOrigin>*</AllowedOrigin>
+    <AllowedMethod>GET</AllowedMethod>
+    <AllowedMethod>HEAD</AllowedMethod>
+    <MaxAgeSeconds>3000</MaxAgeSeconds>
+    <AllowedHeader>Authorization</AllowedHeader>
+</CORSRule>
+</CORSConfiguration>
+```
+
+**Permissions** > **Bucket Policy**:
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::<x>/*"
+        }
+    ]
+}
+```
+
+*! IMPORTANT ! - on the **Resource** line above, be sure to replace `<x>` with your **AWS bucket arn** details, but retain the `/*` at the end.* It should look similar to this:
+    - `"Resource": "arn:aws:s3:::my-bucket-name/*"`
+
+- From here, you'll need to navigate to the **IAM** section of AWS.
+    - Create a *New Group* and be sure to select your existing S3 Bucket details to attach.
+    - Create a *New Policy* and a *New User* in the IAM section as well, then attach these to the Group you just built.
+- In your CLI-terminal, you should now be able to push the static files to AWS if everything is configured properly using this command:
+    - `python3 manage.py collectstatic`
+- Sign up for a free [Stripe](https://stripe.com) account. Navigate to the **Developers** section, and click on **API Keys**. You should have two confidential keys which need to be added to your *.env* file, as well as your Heroku config vars. These keys are:
+    - `Publishable Key`: **STRIPE_PUBLIC_KEY**
+    - `Secret Key`: **STRIPE_SECRET_KEY**
+    - `Webhook Secret Key`: **STRIPE_WH_SECRET**
+
+Congratulations! The project should be completely setup and ready for remote deployment!
+
+##### back to [top](#table-of-contents)
+
+
+## Credits
+
+### Code
+
+- [Django Docs](https://docs.djangoproject.com/en/3.2/)
+- [Stripe Docs](https://stripe.com/docs)
+- [Bootstrap4 Docs](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
+- [Python Docs](https://docs.python.org/3/)
+- [w3schools](https://www.w3schools.com/) 
+- [Stack Overflow](https://stackoverflow.com/)
+- [Slack](https://slack.com/intl/en-ie/) - Specifically 'Full Stack Frameworks' in the Code Institute Channel.
+- Boutique Ado Project - [Code Institute](https://codeinstitute.net/) Full Stack Frameworks Module
+- [AnimateCSS](https://animate.style/) 
+
+### Content & Media
+- [Unsplash](https://unsplash.com/) - For images used on this website.
+- [SkatePro](https://www.skatepro.ie/) - For products displayed on site, images/descriptions/pricing.
+- [SurfDome](https://www.surfdome.ie/) - For products displayed on site, images/descriptions/pricing.
+- Athletes & Team members are people I am friends with whom volunteered to be showcased on the website during development.
+    - Their respective social medias are linked with their permission.
+
+#### Acknowledgements
+
+Thank you to the [Code Institute](https://codeinstitute.net/) & their brilliant & easy to understand learning content throughout the course.
+Thank you to my mentor [Adegbenga Adeye](https://github.com/deye9) for help in my first few software projects.
+Thank you to CI tutors in the Code Institute slack channel for being readily available to help with any issues I posted in.
+Thank you to student support team for their help throughout this course.
+
+## **Disclaimer** 
+All images and content on this website is for educational purposes only.
+
+##### [Back to Table of Contents](#table-of-contents)
