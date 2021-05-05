@@ -515,13 +515,13 @@ This project can be viewed live on Heroku: [https://apres-apparel.herokuapp.com]
 **PLEASE NOTE**: My Static & Media files are hosted on Amazon AWS in an S3-Bucket. My media files were pushed to GitHub purely for project assessment purposes only at the end of development! My *static* file contains the following folders and files:
 
 - **css/**
-    - *[styles.css](apres-apparel-ms4/static/css/styles.css)*
+    - *[styles.css](https://github.com/Shadyxstep/apres-apparel-MS4/blob/master/static/css/base.css)*
 - **media/**
     - all images used for the project
 - **js/**
     - *[scripts.js](bottom of page in: bag/templates/bag/bag.html, products/templates/products/products.html, teams/templates/teams/team.html, teams/templates/athletes/athlete.html )*
-    - *[stripe.js](apres-apparel-ms4/checkout/static/checkout/js/stripe_elements.js)*
-    - *[countryfields.js](apres-apparel-ms4/profiles/js/countryfield.js)*
+    - *[stripe.js](https://github.com/Shadyxstep/apres-apparel-MS4/blob/master/checkout/static/checkout/js/stripe_elements.js)*
+    - *[countryfields.js](https://github.com/Shadyxstep/apres-apparel-MS4/blob/master/profiles/static/profiles/js/countryfield.js)*
 
 
 ### Local Deployment
