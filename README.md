@@ -255,10 +255,19 @@ The white background also helps the product images pop out visually for the site
 ### Features Left To Implement
 
 **Additional Products & Categories**
-- Add more products & categories added to the website. 
+- Add more product models & category models to the website. 
 - More products specific to surfing, hiking, mountain climbing, skiing.
 
-#### Technologies Used
+**Contact Page & Newsletter Signup**
+- Add an onsite method for guests & registered users to contact the store owners / admin.
+    - I have actually successfully implemented this feature on my localhost server using 2FA authentication with gmail. However after the project was deployed to production on Heroku, I have
+    had issues with models created after deployment migrating to django correctly - which results in a *Server Error: 500* on the post request being sent from contact views.
+    - Due to time constraints, I have left it out on this version of the project.
+
+**Upcoming Events**
+- Add an event application feature which displays upcoming sporting events, sales & social events for users visiting the online store.
+
+### Technologies Used
 
 ### Version Control & Project Management
 
@@ -332,12 +341,13 @@ I have also checked compatibility of the site across various modern browsers and
 
 **CSS**
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
-    - The W3C Jigsaw validator shows Bootstrap4 2 errors coming from URI: "https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" The errors are:
+    - The W3C Jigsaw validator shows Bootstrap4 2 errors coming from URI: *"https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"*
+    The errors are:
         - abbr[data-original-title], abbr[title] -> "Property text-decoration-skip-ink doesn't exist : none"
         - .accordion -> "Property overflow-anchor doesn't exist : none"
         
     - The W3C Jigsaw validator does not yet recognize elements imported in from the AnimateCSS library used in this project, and therefore passes 34 **Parse Errors**. The elements from AnimateCSS in my landing page headings are not recognized by the CSS Validator. The Parse Errors I've received are:
-        - ![css_validation](media/readme-imgs/css-validation-errors-AnimateCSS.JPG)
+        - ![css_validation](media/readme-imgs/css-validation-errors-animateCSS.JPG)
 
     - I also received these **Warnings** which are all coming from the validator not recognizing vendor extensions from Bootstrap4 and AnimateCSS:
 
@@ -359,10 +369,22 @@ I have also checked compatibility of the site across various modern browsers and
 **JavaScript**
 
 - [JShint](https://jshint.com/)
-    - **stripe.js** - [stripe_elements.js](https://github.com/Shadyxstep/apres-apparel-MS4/blob/d4eec8eeb85a53bdb29b29875f38028479dace3c/checkout/static/checkout/js/stripe_elements.js)
-    ![js_validation](media/readme-imgs/stripe-jscode-validator.JPG)
+    - **Stripe.js** - [stripe_elements.js File](https://github.com/Shadyxstep/apres-apparel-MS4/blob/d4eec8eeb85a53bdb29b29875f38028479dace3c/checkout/static/checkout/js/stripe_elements.js)
+        - The javascript for strip_elements was taken from Stripe Documentation.
+        - Errors include 
+            -	*template literal syntax' is only available in ES6 (use 'esversion: 6').*
+            -   *Missing semicolon*
+            -   *'$' is not defined.*
 
-    - **scripts** -
-        - The rest of my JS code are scripts located at the bottom of various HTML pages
+    - ![js_validation](media/readme-imgs/stripe-jscode-validator.JPG)
+
+
+    - **Scripts** -
+        - The rest of my JS code are scripts located at the bottom of various HTML pages. These scripts include:
+            - Toast Messages alerting the user whether an action they took was successful/unsuccessful.
+            - Button on bottom right that allows users to navigate back to top of the current page with a click.
+
         - No major errors found in any of the script code, however these warnings showed up relating to the syntax of `<script type=text/javascript>`.
-        ![js_script_validation](media/readme-imgs/js-validator-errors.JPG)
+            - Those errors are shown below.
+        
+        - ![js_script_validation](media/readme-imgs/js-validator-errors.JPG)
