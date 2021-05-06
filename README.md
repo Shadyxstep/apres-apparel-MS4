@@ -57,6 +57,7 @@ The objective for this project is to "Create a web application that allows users
 This e-commerce site is made for those who love adventuring, sports and the outdoors!
 We also have a section dedicated to athletes we support & follow, and the team members behind the Après Apparel brand, with social media links provided
 for any curious visitors to site to check out.
+I have placed a big emphasis on buttons to navigate each pages layout which is subsequently made up of sections that are 100vh(view height) on all devices, button clicks allows the user to navigate to the next available section intuitively & smoothly as smooth-scrolling is enabled for all HTML elements in my static CSS files.
 
 ### User Stories
 
@@ -107,7 +108,8 @@ for any curious visitors to site to check out.
 **Team** 
 - :white_check_mark: *I want to be able to see who is behind the brand*
 - :white_check_mark: *I want to be able to see which roles each team member has in relation to the brand*
-- :white_check_mark: *I want to be able to connect with an specific team member via social media*
+- :white_check_mark: *I want to be able to connect with a specific team member via social media*
+- :white_check_mark: *I want to be able to view the individual team member details*
 
 **Shopping Bag**  
 - :white_check_mark: *I want to easily view my shopping bag*
@@ -125,6 +127,7 @@ for any curious visitors to site to check out.
 
 **Account**   
 - :white_check_mark: *I want to be able to create an account*
+- :white_check_mark: *I want to be able to see the order history for my account*
 
 #### **As a Registered User:** 
 - :white_check_mark: *I want to be able to log in and out easily*
@@ -178,7 +181,7 @@ symbolize the outdoor lifestyle the brand wishes to promote.
 - ![#000](https://via.placeholder.com/15/000/000000?text=+) `#000`
 
 My main reason for a basic white/grey/black monochromatic color scheme is that it provides high contrast between text & background elements which makes readability easier for visitors who visit the site.
-I've been inspired in the past by tech giant Apple's UX, where they favour simplicity & grayscale monochromatic color schemes.
+I've been inspired in the past by tech giant Apple's UX, where they favour simplicity, subtle animations & grayscale monochromatic color schemes.
 This particular color scheme also fits in with the simple aesthetic the brand owner of Après Apparel is trying to achieve.
 
 White is the predominant theme of the website with black being reserved for button outlines & texts for extra readability.
@@ -262,18 +265,32 @@ The white background also helps the product images pop out visually for the site
 - Section designated to showcasing sponsored athletes & the team behind the Après Apparel brand and their respective social media links.
 
 **Toast Messages**
-- Site wide feature that gives users feedback on if the action they took was successful/unsuccessful with correlating colors.
+- Site wide feature that gives users feedback on if the action they performed was successful/unsuccessful with correlating colors.
+
 - There are 4 types of toast messages:
-        - Success (Green)
-        - Info  (Blue)
-        - Warning (Yellow)
-        - Error (Red)
+    - Success (Green)
+    - Info  (Blue)
+    - Warning (Yellow)
+    - Error (Red)
 
 **Automated Emails**
-    - Automated emails are sent to the user when certain actions are performed.
-        - Account verification email when a user registers for an account.
-        - Password reset email.
-        - Order confirmation email when a user completes an order.
+- Automated emails are sent to the user when certain actions are performed.
+    - Account verification email when a user registers for an account.
+    - Password reset email.
+    - Order confirmation email when a user completes an order.
+
+- Order Confirmation
+
+    - ![Order Confirmation](media/readme-imgs/aa-order-confirmation.JPG)
+
+- Contact App Message Confirmation (Local Version Only)
+
+    - ![Contact Confirmation](media/readme-imgs/contact-confirmation-local.JPG)
+
+- Email Signup Verifcation using [Temp Mail](https://temp-mail.org/id/API)
+
+    - ![Registration Email Confirmation](media/readme-imgs/email-verification-testing.JPG)
+
 
 ### Features Left To Implement
 
@@ -521,9 +538,9 @@ As a result of this, I rectified any responsive issues throughout development by
 ![product_page_performance](media/readme-imgs/athlete-page-performance.JPG)
 
 - As you can see from the above performance ratings of the site (from ), 'performance' score was the lowest across the pages as a result of the imported AnimateCSS classes.
-I am happy to sacrifice a few fractional seconds of performance loading time for the visual effect I was trying to achieve on each pages landing titles.
+    - Whilst not enitrely ideal, the website has run fine on devices I used to manually test the site so I am happy to sacrifice a few fractional seconds of performance loading time for the visual effect I was trying to achieve on each pages landing titles.
 
-- I will attempt to use clean Javascript code as an alternative to Animated CSS classes going forward in order to create visually appealing websites without the performance hit.
+- I will attempt to use clean Javascript code as an alternative to Animated CSS classes going in further development of this project in order to create a visually appealing website without the performance hit.
 
 
 ### Known Issues
@@ -532,12 +549,12 @@ I am happy to sacrifice a few fractional seconds of performance loading time for
 store owners via email.
     - This was successful in my local environment, however unsuccessful in the production version of the website as I tried to create the contact app after deployment to Heroku. This led to problems with me creating and migrating new models to django.
     Whenever an email was sent when hosted on Heroku, it would return a "Server Not Found: 500 Error".
-    - I am certain I can easily resolve this and implement the feature correctly, however due to project submssion time constraints, I unfortunately have to leave it out in this version.
+    - I am certain I can easily resolve this and implement the feature correctly, however due to time constraints, I unfortunately have to leave it out in this version.
 
 - I also had issues with registration feature on the website. It would return a "Server Not Found: 500 Error" whenever a user tried to register a new profile.
-    - I had sought out help on slack for this issue but identified and rectified the issue myself by running Heroku logs & checking the logs in my local environment.
-    - I had refactored my code in settings.py to be PEP8 compliant, this was what caused the issue, specifically 'AUTH_PASSWORD_VALIDATORS' as it was throwing up *line too long (>79 characters)* warnings.
-    - After reverting the code back to its original format, the registration issue was resolved.
+    - I had sought out help on slack for this issue but later identified and rectified the issue myself by running Heroku logs & checking the logs in my local environment for the source of error.
+    - I had previously refactored my code in settings.py to be PEP8 compliant and this ended up being what caused the issue. Specifically the 'AUTH_PASSWORD_VALIDATORS' setting as it was throwing up *line too long (>79 characters)* warnings in Pylint.
+    - After reverting the code back to its original format, the registration issue was resolved & new users could register without a problem.
 
 
 ##### back to [top](#table-of-contents)
@@ -550,13 +567,13 @@ This project can be viewed live on Heroku: [https://apres-apparel.herokuapp.com]
 **PLEASE NOTE**: My Static & Media files are hosted on Amazon AWS in an S3-Bucket. My media files were pushed to GitHub purely for project assessment purposes only at the end of development! My *static* file contains the following folders and files:
 
 - **css/**
-    - *[styles.css](https://github.com/Shadyxstep/apres-apparel-MS4/blob/master/static/css/base.css)*
+    - *[styles.css](apres-apparel-MS4/static/css/base.css)*
 - **media/**
     - all images used for the project
 - **js/**
     - *[scripts.js](bottom of page in: bag/templates/bag/bag.html, products/templates/products/products.html, teams/templates/teams/team.html, teams/templates/athletes/athlete.html )*
-    - *[stripe.js](https://github.com/Shadyxstep/apres-apparel-MS4/blob/master/checkout/static/checkout/js/stripe_elements.js)*
-    - *[countryfields.js](https://github.com/Shadyxstep/apres-apparel-MS4/blob/master/profiles/static/profiles/js/countryfield.js)*
+    - *[stripe.js](apres-apparel-MS4/checkout/static/checkout/js/stripe_elements.js)*
+    - *[countryfields.js](apres-apparel-MS4/profiles/static/profiles/js/countryfield.js)*
 
 
 ### Local Deployment
@@ -693,8 +710,8 @@ Congratulations! The project should be completely setup and ready for remote dep
 #### Acknowledgements
 
 Thank you to the [Code Institute](https://codeinstitute.net/) & their brilliant & easy to understand learning content throughout the course.
-Thank you to my mentor [Adegbenga Adeye](https://github.com/deye9) for help in my first few software projects.
-Thank you to CI tutors in the Code Institute slack channel for being readily available to help with any issues I posted in.
+Thank you to my mentor [Adegbenga Adeye](https://github.com/deye9) for helping kickstart my first few software projects.
+Thank you to CI tutors & other students in the Code Institute slack channel for being readily available to help with any issues I posted in.
 Thank you to student support team for their help throughout this course.
 
 ## **Disclaimer** 
