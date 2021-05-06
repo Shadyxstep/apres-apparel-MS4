@@ -58,7 +58,9 @@ This e-commerce site is made for those who love adventuring, sports and the outd
 We also have a section dedicated to athletes we support & follow, and the team members behind the Après Apparel brand, with social media links provided
 for any curious visitors to site to check out.
 
-"**_As a anonymous user, I would like to_** _____________________________"
+### User Stories
+
+"**_As a user, I would like to_** _____________________________"
 
 :white_check_mark: *denotes items that have been successfully implemented*
 
@@ -139,8 +141,10 @@ for any curious visitors to site to check out.
 - :white_check_mark: *I want to ba able to add/edit/delete subcategories*
 - :white_check_mark: *I want to be able to add new products*
 - :white_check_mark: *I want to be able to add new athletes*
+- :white_check_mark: *I want to be able to add new team members*
 - :white_check_mark: *I want to be able to edit/delete existing products*
 - :white_check_mark: *I want to be able to edit/delete existing athletes*
+- :white_check_mark: *I want to be able to edit/delete existing team members*
 - :white_check_mark: *I want to be able to view/manage users of the site*
 - :white_check_mark: *I want to be able to view/manage orders*
 
@@ -150,10 +154,11 @@ for any curious visitors to site to check out.
 - The design of the Après Apparel website is a monochromatic Black/White/Grey color scheme to fit in line with a simple high contrast aesthetic, with various star/sunset background images used across the site to 
 symbolize the outdoor lifestyle the brand wishes to promote.
 - I personally prefer to create my websites with a light/dark theme and avoid brighter colours as I feel it can impede on readability for the user.
-- I wanted the website to have a simplistic high contrast colour scheme
+- I wanted the website to have a simplistic high contrast colour scheme.
 - I wanted the website to be intuitive and easy to navigate.
 - I wanted to achieve a clean, uncluttered aesthetic.
-- I wanted the website to be accessible on all devices (desktop, mobile, tablet).
+- I wanted the website to be accessible & responsive on all modern devices (desktop, mobile, tablet).
+- I wanted a button scheme for users to easily navigate with a tap to different div sections (100vh/view height) on single pages.
 
 #### Frameworks
 
@@ -189,7 +194,7 @@ The white background also helps the product images pop out visually for the site
 
 - [Google Fonts](https://fonts.google.com/) were used across the site:
 - [Montserrat](https://fonts.google.com/specimen/Montserrat#standard-styles) : default font.
-- [AnimateCSS](https://animate.style/) : Animations used for landing, team & athlete page.
+- [AnimateCSS](https://animate.style/) : Animations used for heading on landing, team & athlete page.
 - [Bootstrap](https://getbootstrap.com/) : Typography / Colors Documentation from Bootstrap was used in various headings/texts/alerts around the site such as ".display-x" & ".text-success" classes.
 
 
@@ -208,6 +213,8 @@ The white background also helps the product images pop out visually for the site
 - Team Page
 
 ![Team Page](media/wireframes/team-page-wireframe.JPG)
+
+##### back to [top](#table-of-contents)
 
 #### Features
  
@@ -246,7 +253,7 @@ The white background also helps the product images pop out visually for the site
 - Registered users can view account order history & all associated information such as date/price/item/qty/order number. They can also manage any items in their shopping bag.
 
 **Add Products**
-- [CRUD] Store Owners / Superusers can add new products to the website or update/delete current products or athletes. Certain defensive programming measures have been implemented such as granting adding/editing/deleting permissions to registered superusers/store owners only.
+- [CRUD] Store Owners / Superusers can add new products to the website or update/delete current products or athletes/team members. Certain defensive programming measures have been implemented such as granting adding/editing/deleting permissions to registered superusers/store owners only and having the /add/ directory only available to users logged in to verify if they're a superuser.
 
 **Admin**
 - Django Admin application that allows superusers / store owners to manually create, update or delete any existing models or products from the store.
@@ -271,23 +278,31 @@ The white background also helps the product images pop out visually for the site
 ### Features Left To Implement
 
 **Additional Products & Categories**
+
 - Add more product models & category models to the website. 
+- Add carousel images to each product to aid user in better decision making when purchasing.
 - More products specific to surfing, hiking, mountain climbing, skiing.
 
 **Contact Page & Newsletter Signup**
+
 - Add an onsite method for guests & registered users to contact the store owners / admin.
     - I have actually successfully implemented this feature on my localhost server using 2FA authentication with gmail. However after the project was deployed to production on Heroku, I have
-    had issues with models created after deployment migrating to django correctly - which results in a *Server Error: 500* on the post request being sent from contact views.
+    had issues with models created after deployment migrating to django correctly - which results in a *Server Error: 500* on the message post request being sent from contact app views.py file.
     - Due to time constraints, I have left it out on this version of the project.
 
 **Upcoming Events**
+
 - Add an event application feature which displays upcoming sporting events, sales & social events for users visiting the online store.
+    - Inform the user of the nature of event, time & location.
+    - Add payment portal for tickets to speicific events.
+
+##### back to [top](#table-of-contents)
 
 ### Technologies Used
 
 ### Version Control & Project Management
 
-- [Git](https://git-scm.com/) - Primary version control for pushing code to my online repository.
+- [Git](https://git-scm.com/) - Primary version control for pushing/pulling code to & from my online repository.
 
 - [GitPod](https://www.gitpod.io/) - Used as my primary IDE for developing projects.
 
@@ -305,7 +320,7 @@ The white background also helps the product images pop out visually for the site
 
 - [Bootstrap 4.6.0](https://getbootstrap.com/) - Used as the front-end framework for layout and design.
 
-- [Stripe API](https://stripe.com/docs/api?lang=python) - Used to make secured payments.
+- [Stripe API](https://stripe.com/docs/api?lang=python) - Used to implement secure payments.
 
 - [Amazon AWS S3](https://aws.amazon.com/) - Used to store *staticfiles* and *media* folders and files.
 
@@ -326,7 +341,10 @@ The white background also helps the product images pop out visually for the site
 
 - [Am I Responsive](http://ami.responsivedesign.is/) - Check responsiveness of website.
 
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Automated tool to audit websites performance, accessibility, SEO & best practices.
+
 ### Resources
+
 - [Django Docs](https://docs.djangoproject.com/en/3.2/)
 - [cdnjs](https://cdnjs.com/)
 - [w3schools](https://www.w3schools.com/) 
@@ -336,6 +354,8 @@ The white background also helps the product images pop out visually for the site
 The environment dependencies/ requirements for this project are shown below :
 
 ![responsive_screenshot](media/readme-imgs/requirementstxt-apresapparel.JPG)
+
+##### back to [top](#table-of-contents)
 
 ### Testing
 
@@ -472,6 +492,18 @@ As a result of this, I rectified any responsive issues throughout development by
 
 - [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) - generated the below reports:
 
+- Performance
+    - "Once Lighthouse is done gathering the performance metrics (mostly reported in milliseconds), it converts each raw metric value into a metric score from 0 to 100 by looking where the metric value falls on its Lighthouse scoring distribution. The scoring distribution is a log-normal distribution derived from the performance metrics of real website performance data on [HTTP Archive](https://httparchive.org/)."
+
+- Accessibility 
+    - "These checks highlight opportunities to improve the accessibility of your web app. Only a subset of accessibility issues can be automatically detected so manual testing is also encouraged."
+
+- Best Practices 
+    - "Analyzes whether HTTPS and HTTP/2 are used, checks to see whether resources come from secure sources and assesses the vulnerability of JavaScript libraries. Other best practices look at secure database connections and avoiding the use of non-secure commands, such as document."
+
+- SEO
+    - "These checks ensure that your page is optimized for search engine results ranking. There are additional factors Lighthouse does not check that may affect your search ranking."
+
 **Home Page**
 
 ![home_page_performance](media/readme-imgs/home-page-performance.JPG)
@@ -506,6 +538,9 @@ store owners via email.
     - I had sought out help on slack for this issue but identified and rectified the issue myself by running Heroku logs & checking the logs in my local environment.
     - I had refactored my code in settings.py to be PEP8 compliant, this was what caused the issue, specifically 'AUTH_PASSWORD_VALIDATORS' as it was throwing up *line too long (>79 characters)* warnings.
     - After reverting the code back to its original format, the registration issue was resolved.
+
+
+##### back to [top](#table-of-contents)
 
 
 ## Deployment
@@ -543,8 +578,8 @@ Next, there's a series of steps to take in order to proceed with local deploymen
     - `cd <path to folder>`
 - Create a `.env` file with your own credentials. An example *.env* file can be found here ([.env_sample](project/.env_sample)).
     - *Note: the example .env file contains environmental variables for both local and remote deployment. (see below for remote deployment details)*
-- Install all requirements from the [requirements.txt](project/requirements.txt) file using this command:
-    - `pip3 install -r project/requirements.txt`
+- Install all requirements from the [requirements.txt](apres-apparel-ms4/requirements.txt) file using this command:
+    - `pip3 install -r apres-apparel-ms4/requirements.txt`
 - In the IDE terminal, use the following command to launch the Django project:
     - `python3 manage.py runserver`
 - The Django server should be running locally now on **http://127.0.0.1:8000** (or similar). If it doesn't automatically open, you can copy/paste it into your browser of choice.
@@ -663,6 +698,7 @@ Thank you to CI tutors in the Code Institute slack channel for being readily ava
 Thank you to student support team for their help throughout this course.
 
 ## **Disclaimer** 
+
 All images and content on this website is for educational purposes only.
 
 ##### [Back to Table of Contents](#table-of-contents)
