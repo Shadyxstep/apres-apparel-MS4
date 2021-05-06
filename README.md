@@ -281,7 +281,7 @@ The white background also helps the product images pop out visually for the site
 
 - Order Confirmation
 
-    - ![Order Confirmation](media/readme-imgs/Inkedaa-order-confirmation_LI.jpg)
+    - ![Order Confirmation](media/readme-imgs/Inkedaa-order-confirmation.jpg)
 
 - Contact App Message Confirmation (Local Version Only)
 
