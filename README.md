@@ -217,6 +217,10 @@ The white background also helps the product images pop out visually for the site
 
 ![Team Page](media/wireframes/team-page-wireframe.JPG)
 
+- AA Models Schema
+
+![Models Schema](media/readme-imgs/aa-schema.JPG)
+
 ##### back to [top](#table-of-contents)
 
 #### Features
