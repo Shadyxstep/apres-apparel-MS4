@@ -111,6 +111,22 @@
                         </span>
                         <span class="text-uppercase">Keep Shopping</span>
                     </a>
+
+                    <!-- Buttons to home/shop -->
+
+                    <hr class="w-100 pt-3 mb-2">
+                    <div class="container text-center">
+                        <div class="row mx-auto" style="padding-top: 35vh;">
+                            <div class="col-6 text-align-center">
+                                <a class="ath-detail" href="{% url 'home' %}"><i class="fas fa-home"></i></a>
+                                <h5 class="px-2 py-2">Go Home</h5>
+                            </div>
+                            <div class="col-6 text-align-center">
+                                <a class="ath-detail" href="{% url 'products' %}"><i class="fas fa-shopping-bag"></i></a>
+                                <h5 class="px-2 py-2">Go Shopping</h5>
+                            </div>
+                        </div>
+                    </div>
                 {% endif %}
             </div>
         </div>
