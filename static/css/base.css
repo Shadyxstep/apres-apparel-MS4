@@ -62,6 +62,13 @@ body {
     color: #000 !important;
 }
 
+/* Navbar Styling */
+
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color: rgba(0, 0, 0, 0);
+}
+
 /* Home Page Styling */
 
 i.fas.fa-user-friends.fa-lg:hover,
